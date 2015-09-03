@@ -1,0 +1,315 @@
+/**
+ * partials/pages
+ * ---
+ */
+
+.post-14 {
+	background-color: #E6E6E6;
+}
+
+article {
+	@include container();
+}
+
+.imagemIlustrativa {
+	float: right;
+	margin-top: 10px;
+}
+
+#categoriasPre {
+	list-style: none;
+	padding: 0;
+	overflow: hidden;
+	margin-bottom: 40px;
+
+	li {
+		display: inline-block;
+		@include span(1 of 4 0);
+
+		a {
+			display: block;
+			color: #fff;
+			text-align: center;
+			line-height: $botao-topo-height*0.9;
+			font-size: 1.6rem;
+			text-transform: uppercase;
+
+			&:hover {
+				color: #000;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+#thumbCtrlFicha, #tituloEtexto {
+	@include span(6);
+}
+
+#thumbCtrlFicha {
+
+	.wp-post-image {
+		width: 100%;
+	}
+
+	.thumbEcontroles {
+		position: relative;
+		overflow: hidden;
+
+
+		.ctrl {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			background-color: rgba(#fff, .6);
+			width: 40px;
+		}
+
+		.prev {
+			left: 0;
+		}
+
+		.next {
+			right: 0;
+		}
+	}
+}
+
+.metade {
+	@include span(6);
+}
+
+.pilares {
+	@include span(4);
+	padding: 0 10px;
+	text-align: justify;
+
+	&:last-child {
+		@include suffix(0);
+	}
+
+	.botaoGrande {
+		margin-left: -15px;
+		font-size: 2.5rem;
+		font-weight: 400;
+		color: #fff;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}
+
+.cadaSomos {
+	background-color: #eaeaea;
+	padding: 20px;
+	margin-bottom: 30px;
+	min-height: $imagem-quem-somos-height;
+	position: relative;
+	overflow: hidden;
+	box-shadow: inset 12px 0 0 #fff;
+
+	.imagemQuemSomos {
+		float: left;
+		margin: -20px 20px 0 -20px;
+
+		h2 {
+			color: #fff;
+			margin-top: 8px;
+			margin-left: 20px;
+			font-weight: 500;
+			font-size: 1.75rem;
+			letter-spacing: -0.5px;
+		}
+	}
+
+	.texto {
+		width: 70%;
+		float: right;
+		overflow: hidden;
+	}
+
+	.flamula {
+		margin: -20px 20px 0 -32px;
+
+		h2 {
+			color: #fff;
+			margin-top: 10px;
+			margin-left: 10px;
+			font-weight: 500;
+			font-size: 1.6rem;
+			line-height: 2.5;
+			white-space: nowrap;
+		}
+	}
+}
+
+.cadaMembro {
+	@include container();
+	margin-bottom: 30px;
+	background-color: #eaeaea;
+
+	.miniBio {
+		@include span(9);
+		padding-left: 20px;
+	}
+
+	img.foto {
+		@include span(3);
+	}
+}
+
+.single {
+	margin-top: 0;
+
+	section {
+		@include container();
+		background-color: #e6e6e6;
+
+		.type-post {
+			@include span(last 9);
+
+			@include susy-media (max-width $wrapper-width) {
+				@include span(1 of 1 0); 
+			}
+
+			img {
+				@include span(4 of 10);
+				margin-top: 20px;
+
+				@include susy-media (max-width $wrapper-width) {
+					@include span(1 of 1 0);
+					margin: 0 0 0 -2px;
+				}
+			}
+
+			p {
+				@include span(6 of 10);
+
+				@include susy-media (max-width $wrapper-width) {
+					@include span(1 of 1);
+				}
+			}
+		}
+
+		.type-downloads {
+			@include span(last 7 of 12 0);
+			background-color: #fff;
+			padding: 0 10px;
+
+			@include susy-media (max-width $wrapper-width) {
+				@include span(1 of 1 0); 
+			}
+
+			.downloadSingle {
+				border-bottom: solid 1px #999;
+				padding-bottom: 10px;
+				margin-bottom: 20px;
+
+				h1, h2 {
+					text-transform: uppercase;
+					color: #5D5D5D;
+					margin: 10px 0;
+					line-height: 1;
+					font-family: "myriad-pro", sans-serif;
+				}
+
+				h1 {
+					font-size: 2.5rem;
+					margin: 0;
+					margin-bottom: 10px;
+				}
+
+				h2 {
+					font-size: 1.8rem;
+					font-weight: 300;
+				}
+			}
+
+			img {
+				@include span(1 of 1 0);
+				margin-top: 20px;
+
+				@include susy-media (max-width $wrapper-width) {
+					margin: 0 0 0 -2px;
+				}
+			}
+
+			p {
+				@include span(1 of 1 0);
+			}
+		}
+	}
+
+	#singleDownloads {
+		background-color: #fff;
+		margin-top: 30px;
+	}
+}
+
+#menuInstitucional {
+	list-style: none;
+	padding: 0;
+	overflow: hidden;
+
+	li.botaoTopo {
+		display: block;
+		float: left;
+		text-align: center;
+		padding: 0;
+		margin: 0;
+		width: 180px;
+
+		@include susy-media (max-width $wrapper-width) {
+			background-image: none;
+			background-color: #17243E;
+			margin: 2px 0;
+			height: initial;
+			@include span(1 of 1);
+		}
+
+		a {
+			color: #fff;
+			padding: 0 10px;
+			margin-top: 10px;
+			display: block;
+
+			@include susy-media (max-width $wrapper-width) {
+				line-height: 3;
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+#trabalheConosco {
+	border-top: 1px solid;
+	color: $azul;
+	margin-top: 50px;
+
+	.cadaTrabalhe {
+		@include span(6);
+	}
+
+	.trabalheL {
+		
+	}
+
+	.trabalheR {
+		text-align: center;
+	}
+
+	h2 {
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+
+.verMais {
+	display: block;
+	clear: both;
+	color: #fff;
+	text-transform: uppercase;
+	line-height: $ver-mais-height;
+	width: $ver-mais-width;
+	text-align: center;
+	margin: auto;
+}
