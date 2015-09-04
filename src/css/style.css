@@ -1824,3 +1824,73 @@ article:after {
   text-transform: uppercase;
   margin-top: 30px;
 }
+
+.certificacoes h4 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0;
+}
+.certificacoes .grupoPremios {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.certificacoes .grupoPremios:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.certificacoes .grupoPremios .cadaPremio {
+  width: 20%;
+  float: left;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  text-align: center;
+}
+.certificacoes .grupoPremios .cadaPremio .contemLogo {
+  border: solid 1px #2C97BE;
+  height: 200px;
+  padding: 20px;
+  white-space: nowrap;
+  text-align: center;
+  margin: 1em 0;
+}
+.certificacoes .grupoPremios .cadaPremio .helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.certificacoes .grupoPremios .cadaPremio img {
+  vertical-align: middle;
+  max-height: 200px;
+  max-width: 100%;
+}
+.certificacoes .certificacaoMor {
+  overflow: hidden;
+  margin: 0 2% 50px;
+}
+.certificacoes .certificacaoMor .logoEtexto {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 1px #2C97BE;
+}
+.certificacoes .certificacaoMor .logoEtexto:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.certificacoes .certificacaoMor .logoEtexto img {
+  width: 31.6666666667%;
+  float: left;
+  margin-left: 0.8333333333%;
+  margin-right: 0.8333333333%;
+}
+.certificacoes .certificacaoMor .logoEtexto p {
+  width: 65%;
+  float: left;
+  margin-left: 0.8333333333%;
+  margin-right: 0.8333333333%;
+  font-size: 2rem;
+}

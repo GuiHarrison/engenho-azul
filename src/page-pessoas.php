@@ -9,11 +9,7 @@
 
 			<?php if (!is_home() && !is_page('home')) { the_breadcrumb(); } ?>
 
-			<ul id="emPessoas">
-				<li class="botaoTopo"><a href="<?php echo home_url(); ?>/institucional/quem-somos">Quem Somos</a></li>
-				<li class="botaoTopo"><a href="<?php echo home_url(); ?>/institucional/premios-e-certificados">Prêmios e Certificações</a></li>
-				<li class="botaoTopo"><a href="<?php echo home_url(); ?>/institucional/governanca">Governança</a></li>
-			</ul>
+			<?php echo get_template_part('escolhaPessoas'); ?>
 
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
