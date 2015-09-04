@@ -25,7 +25,7 @@
 		right: 0;
 		padding: 5px 10px;
 		background-color: rgba(#fff, .8);
-		
+
 		color: $azul;
 		font-size: 1.2rem;
 		font-weight: 500;
@@ -89,7 +89,7 @@
 
 #videos {
 	@include span(3);
-	
+
 	@include susy-media (max-width $wrapper-width) {
 		@include span(1 of 1 0);
 		overflow: hidden;
@@ -116,9 +116,11 @@
 	.verMais {
 		display: block;
 		margin-top: 10px;
-		margin-left: -10px;
-		width: 230px;
-		
+		margin-left: 0;
+		width: 100%;
+		background: none;
+		background-color:#17243e;
+
 		color: #fff;
 		text-transform: uppercase;
 		text-align: center;

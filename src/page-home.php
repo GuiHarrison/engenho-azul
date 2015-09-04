@@ -67,9 +67,24 @@
 			<div id="videos">
 				<h2>Vídeos</h2>
 				<div class="video">
-					<?php echo do_shortcode( "[auto_last_youtube_video user='Preconmaterial' width='217' height='226'][/auto_last_youtube_video]" ); ?>
+					<?php echo do_shortcode( "[auto_last_youtube_video user='Preconmaterial' width='291' height='152'][/auto_last_youtube_video]" ); ?>
 				</div>
-				<a href="#" class="verMais">Ver mais</a>
+
+				<?php
+					$queryDownloads = new WP_Query( array(
+						'post_type' => 'downloads',
+						'posts_per_page' => 1
+					) );
+
+					if ( $queryDownloads->have_posts() )
+						{
+							while ($queryDownloads->have_posts()) : $queryDownloads->the_post();
+								echo '<a class="verMais" href="' . post_permalink() . '">'. 'Ver mais' .'</a>';
+							endwhile;
+						}
+					wp_reset_postdata();
+				?>
+
 			</div>
 
 			<div id="downloads">

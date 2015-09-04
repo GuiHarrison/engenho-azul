@@ -168,7 +168,7 @@ article {
 			@include span(last 9);
 
 			@include susy-media (max-width $wrapper-width) {
-				@include span(1 of 1 0); 
+				@include span(1 of 1 0);
 			}
 
 			img {
@@ -196,7 +196,7 @@ article {
 			padding: 0 10px;
 
 			@include susy-media (max-width $wrapper-width) {
-				@include span(1 of 1 0); 
+				@include span(1 of 1 0);
 			}
 
 			.downloadSingle {
@@ -245,13 +245,16 @@ article {
 	}
 }
 
-#menuInstitucional {
+#emPessoas {
 	list-style: none;
 	padding: 0;
+	margin: 50px auto;
 	overflow: hidden;
+	text-align: center;
+	width: $botao-topo-width*3;
 
 	li.botaoTopo {
-		display: block;
+		display: inline-block;
 		float: left;
 		text-align: center;
 		padding: 0;
@@ -290,7 +293,7 @@ article {
 	}
 
 	.trabalheL {
-		
+
 	}
 
 	.trabalheR {
@@ -312,4 +315,98 @@ article {
 	width: $ver-mais-width;
 	text-align: center;
 	margin: auto;
+}
+
+// PESSOAS
+
+#videoPessoas {
+	width: 100%;
+	height: 400px;
+	display: block;
+	margin: 0 auto 50px;
+	background:$cinza url('img/video.png') no-repeat;
+	background-position: 50% 50%;
+	background-size: contain;
+}
+
+.boxPessoas {
+	@include container();
+	display: block;
+	background-color: lighten($cinza, 20) !important;
+	background-position: 300px top !important;
+	background-size: contain !important;
+	height: 250px;
+	color: #fff;
+	padding: 10px;
+	margin-bottom: 10px;
+
+	h2 {
+		display: block;
+		border-bottom: 1px solid #fff;
+		text-transform: uppercase;
+		font-size: 2.5rem;
+		line-height: 1;
+		margin: 0;
+	}
+
+	&#box1 {
+		background: url(img/preEngBanner.png) no-repeat;
+	}
+	&#box2 {
+		background: url(img/preFabBanner.png) no-repeat;
+	}
+	&#box3 {
+		background: url(img/linHabBanner.png) no-repeat;
+	}
+	&#box4 {
+		background: url(img/dnaPreBanner.png) no-repeat;
+	}
+}
+
+// Page pessoas
+
+.page-template-template-pessoas {
+
+	.pageCabecalho {
+		height: 200px;
+		padding: 0 20px;
+		border-top: 10px solid $azul;
+		border-bottom: 10px solid $azul;
+		position: relative;
+
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-color: $azul;
+		background-position: right top;
+
+		h1 {
+			color: #fff;
+			font-size: 4rem;
+			max-width: 300px;
+			line-height: .9;
+			margin: 0;
+			text-transform: uppercase;
+			position: absolute;
+			bottom: 0;
+		}
+	}
+
+	.pageConteudo {
+		background-color: lighten($cinza, 50);
+		padding: 20px;
+		margin-top: 10px;
+		font-size: 1.8rem;
+		font-weight: 500;
+		overflow: hidden;
+
+		#voltar {
+			display: block;
+			padding: 10px 20px;
+			border: 1px solid $cinza;
+			float: right;
+			text-transform: uppercase;
+			margin-top: 30px;
+		}
+	}
+
 }

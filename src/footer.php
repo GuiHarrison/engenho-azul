@@ -15,7 +15,7 @@
 								) );
 
 								if ( $queryInst->have_posts() ) {
-									
+
 									while ($queryInst->have_posts()) : $queryInst->the_post();
 										echo
 										'<li><a href="' . post_permalink() . '">';
@@ -36,7 +36,7 @@
 								) );
 
 								if ( $queryInst->have_posts() ) {
-									
+
 									while ($queryInst->have_posts()) : $queryInst->the_post();
 										echo
 										'<li><a href="' . post_permalink() . '">';
@@ -58,7 +58,7 @@
 								) );
 
 								if ( $queryInst->have_posts() ) {
-									
+
 									while ($queryInst->have_posts()) : $queryInst->the_post();
 										echo
 										'<li><a href="' . post_permalink() . '">';
@@ -76,13 +76,13 @@
 								<span>(31)</span>
 								<?php if (kirki_get_option( 'telefone' )) { echo kirki_get_option( 'telefone' );} ?>
 							</h3>
-							
+							<!-- <a class="email" href="mailto:comunicacao@preconengenharia.com.br" target="_blank">comunicacao@preconengenharia.com.br</p> -->
+							<a class="faleConosco" href="<?php echo home_url() . '/contato'; ?>">Fale Conosco</a>
 							<p>Acompanhe a Precon nas redes sociais</p>
 							<div class="redesSociais">
 								<a class="cadaRede facebook" target="_blank" href="https://www.facebook.com/preconengenharia?ref=ts&fref=ts"><?php echo get_template_part( 'img/icons/social', 'facebook.svg' ); ?></a>
 								<a class="cadaRede linkedin" target="_blank" href="https://www.linkedin.com/company/119936?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A119936%2Cidx%3A2-3-6%2CtarId%3A1438349438452%2Ctas%3Aprecon"><?php echo get_template_part( 'img/icons/social', 'linkedin.svg' ); ?></a>
 								<a class="cadaRede instagram" target="_blank" href="https://instagram.com/preconengenharia/"><?php echo get_template_part( 'img/icons/social', 'instagram.svg' ); ?></a>
-								<a class="cadaRede youtube" target="_blank" href="https://www.youtube.com/user/Preconmaterial"><?php echo get_template_part( 'img/icons/social', 'youtube.svg' ); ?></a>
 							</div>
 						</div>
 					</div>

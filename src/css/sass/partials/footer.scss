@@ -66,21 +66,24 @@
 		}
 
 		.telefone {
-			@include span(last 3);
+			@include span(last 2.5);
+			text-align: right;
+			float: right;
 
-			@include susy-media (max-width $wrapper-width) {
+			@include susy-media (max-width 960px) {
 				@include span(12);
 			}
 
 			h3 {
-				font-size: 3.4rem;
+				font-size: 4rem;
 				font-weight: 500;
+				margin: 0;
 
 				span {
-					font-size: 1.8rem;
+					font-size: 1.6rem;
 				}
 
-				@include susy-media (max-width $wrapper-width) {
+				@include susy-media (max-width 960px) {
 					margin: 20px 0 0 0;
 				}
 			}
@@ -88,14 +91,36 @@
 			p {
 				text-transform: uppercase;
 
-				@include susy-media (max-width $wrapper-width) {
+				@include susy-media (max-width 960px) {
 					margin: 0;
 				}
 			}
 
+			a {
+				color: #fff;
+
+				&.email {
+					font-size: 1.2rem;
+				}
+
+				&.faleConosco {
+					margin-top: 5px;
+					display: block;
+					padding: 5px;
+					width: 100%;
+					border: 1px solid #fff;
+
+					text-transform: uppercase;
+					text-align: center;
+				}
+			}
+
 			.redesSociais {
+
 				.cadaRede {
-					@include span(1 of 4);
+					display: block;
+					float: right;
+					margin: 0 7px;
 				}
 			}
 		}

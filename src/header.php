@@ -52,11 +52,12 @@
 					<!-- /logo -->
 					<!-- menu para escolher portal -->
 					<ul class="qualPortal">
+						<li><a class="current" href="ingage.guiharrison.com/precon2">Institucional</a></li>
 						<li><a href="#">Pré-fabricado de concreto</a></li>
-						<li><a href="http://meuprecon.com.br/">linha habitacional</a></li>
+						<li><a href="http://www.meuprecon.com.br">Venda de imóveis</a></li>
 					</ul>
 					<!-- /menu para escolher portal -->
-					
+
 					<!-- telefone -->
 					<div id="telefoneHead"><h2><span>(31)</span> <?php if (kirki_get_option( 'telefone' )) { echo kirki_get_option( 'telefone' );} ?></h2></div>
 
@@ -66,12 +67,13 @@
 				<div class="header__menu">
 				  <a id="header__button" class="hamburger" href="#">
 				    <div class="hamburger__inner"></div>
-				  </a>  
+				  </a>
 				</div>
 
 				<div class="<?php if (wp_is_mobile()) { echo 'menuMobile'; } else { echo 'barraDeBaixo'; } ?>">
 
 					<ul id="menuPrincipal">
+
 						<li class="boxPreto">
 							<a href="<?php echo home_url(); ?>/institucional/quem-somos" class="cadaItem" id="itemMenu1">
 								<span class="icone menu1"></span>
@@ -83,25 +85,19 @@
 								<span class="setinhaDireita"></span>
 							</a>
 						</li>
-						
+
 						<li class="boxPreto">
-							<a href="<?php
-								$args = array( 'numberposts' => 1 );
-								$lastposts = get_posts( $args );
-								foreach($lastposts as $post) : setup_postdata($post);
-								echo the_permalink();
-								endforeach;
-							?>" class="cadaItem" id="itemMenu2">
+							<a href="<?php echo home_url(); ?>/institucional/pessoas" class="cadaItem" id="itemMenu3">
 								<span class="icone menu2"></span>
 								<span class="iconeA menuAzul2"></span>
-								<h3 class="menuTitulo">Notícias</h3>
+								<h3 class="menuTitulo">Pessoas</h3>
 									<hr>
-								<p class="menuDesc">Fique por dentro das novidades.</p>
+								<p class="menuDesc">Materiais ricos criados para você.</p>
 								<span class="saibaMais">SAIBA MAIS</span>
 								<span class="setinhaDireita"></span>
 							</a>
 						</li>
-						
+
 						<li class="boxPreto">
 							<a href="<?php
 								$args = array( 'numberposts' => 1, 'post_type' => 'downloads' );
@@ -112,6 +108,42 @@
 							?>" class="cadaItem" id="itemMenu3">
 								<span class="icone menu3"></span>
 								<span class="iconeA menuAzul3"></span>
+								<h3 class="menuTitulo">Inovação e Sustentabilidade</h3>
+									<hr>
+								<p class="menuDesc">Materiais ricos criados para você.</p>
+								<span class="saibaMais">SAIBA MAIS</span>
+								<span class="setinhaDireita"></span>
+							</a>
+						</li>
+
+						<li class="boxPreto">
+							<a href="<?php
+								$args = array( 'numberposts' => 1 );
+								$lastposts = get_posts( $args );
+								foreach($lastposts as $post) : setup_postdata($post);
+								echo the_permalink();
+								endforeach;
+							?>" class="cadaItem" id="itemMenu2">
+								<span class="icone menu4"></span>
+								<span class="iconeA menuAzul4"></span>
+								<h3 class="menuTitulo">Notícias</h3>
+									<hr>
+								<p class="menuDesc">Fique por dentro das novidades.</p>
+								<span class="saibaMais">SAIBA MAIS</span>
+								<span class="setinhaDireita"></span>
+							</a>
+						</li>
+
+						<li class="boxPreto">
+							<a href="<?php
+								$args = array( 'numberposts' => 1, 'post_type' => 'downloads' );
+								$lastposts = get_posts( $args );
+								foreach($lastposts as $post) : setup_postdata($post);
+								echo the_permalink();
+								endforeach;
+							?>" class="cadaItem" id="itemMenu3">
+								<span class="icone menu5"></span>
+								<span class="iconeA menuAzul5"></span>
 								<h3 class="menuTitulo">Downloads</h3>
 									<hr>
 								<p class="menuDesc">Materiais ricos criados para você.</p>

@@ -205,12 +205,12 @@ input[type="search"] {
  * ---
  */
 .wrapper {
-  width: 960px;
+  width: 1280px;
   padding: 0 15px;
   margin: 0 auto;
   position: relative;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   .wrapper {
     width: 100%;
   }
@@ -225,7 +225,7 @@ input[type="search"] {
   width: 100%;
   background: url(img/banner.png) center top;
   background-size: cover;
-  height: 60vh;
+  height: 100vh;
   min-height: 300px;
   margin-bottom: 20px;
   overflow: hidden;
@@ -235,7 +235,7 @@ input[type="search"] {
 .header.headerMenuAberto {
   margin-bottom: 160px;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   .header {
     height: 80vh;
     border-bottom: solid 8px #2C97BE;
@@ -250,7 +250,7 @@ input[type="search"] {
   overflow: hidden;
   font-weight: 500;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   .header .barraDeCima {
     height: initial;
     border-radius: 0;
@@ -269,7 +269,7 @@ input[type="search"] {
   margin-left: 0.8333333333%;
   margin-right: 0.8333333333%;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   .header .barraDeCima .logo, .header .barraDeCima #telefoneHead {
     width: 98.3333333333%;
     float: left;
@@ -281,7 +281,7 @@ input[type="search"] {
 .header .barraDeCima .logo .logo-img {
   width: 150px;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   .header .barraDeCima .logo .logo-img {
     display: block;
     margin: 0 auto;
@@ -306,23 +306,24 @@ input[type="search"] {
   }
 }
 .header .barraDeCima .qualPortal li {
-  width: 50%;
+  width: 33.3333333333%;
   float: left;
+}
+.header .barraDeCima .qualPortal li:nth-child(2) a {
+  border: none;
+}
+.header .barraDeCima .qualPortal li a {
+  font-weight: 600;
   height: 60px;
-  padding: 0 20px;
+  padding: 10px 20px;
   text-transform: uppercase;
-  text-align: center;
+  text-align: center !important;
   border-left: solid 1px #5E5E5D;
   border-right: solid 1px #5E5E5D;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  box-align: center;
+  display: block;
 }
 @media (max-width: 960px) {
-  .header .barraDeCima .qualPortal li {
+  .header .barraDeCima .qualPortal li a {
     width: 98.3333333333%;
     float: left;
     margin-left: 0.8333333333%;
@@ -333,24 +334,19 @@ input[type="search"] {
     padding: 20px 0;
     border-bottom: solid 3px;
   }
-  .header .barraDeCima .qualPortal li:last-child {
+  .header .barraDeCima .qualPortal li a:last-child {
     border-bottom: none;
   }
 }
-.header .barraDeCima .qualPortal li:first-child {
-  border-right: none;
-}
-.header .barraDeCima .qualPortal li a {
-  font-weight: 600;
-}
-.header .barraDeCima .qualPortal li a:hover {
-  color: #2C97BE;
+.header .barraDeCima .qualPortal li a:hover, .header .barraDeCima .qualPortal li a.current {
+  background-color: #2C97BE;
+  color: #fff;
 }
 .header .barraDeCima #telefoneHead {
   text-align: right;
   line-height: 2;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   .header .barraDeCima #telefoneHead {
     text-align: center;
     position: absolute;
@@ -364,7 +360,7 @@ input[type="search"] {
   font-size: 3rem;
   font-weight: 600;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   .header .barraDeCima #telefoneHead h2 {
     font-size: 2rem;
     font-weight: 300;
@@ -373,7 +369,7 @@ input[type="search"] {
 .header .barraDeCima #telefoneHead h2 span {
   font-size: 2rem;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   .header .barraDeCima #telefoneHead h2 span {
     font-size: 1em;
   }
@@ -398,8 +394,15 @@ input[type="search"] {
 .header .barraDeBaixo #menuPrincipal {
   list-style: none;
   padding: 0;
-  width: 474px;
   margin: auto;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header .barraDeBaixo #menuPrincipal:after {
+  content: " ";
+  display: block;
+  clear: both;
 }
 @media (max-width: 960px) {
   .header .barraDeBaixo #menuPrincipal {
@@ -412,14 +415,18 @@ input[type="search"] {
   }
 }
 .header .barraDeBaixo #menuPrincipal .boxPreto {
-  width: 33.3333333333%;
   float: left;
+  width: 160px;
   overflow: hidden;
-  background-color: #111;
+  background-color: transparent;
   height: inherit;
   padding: 10px 0;
   margin-top: 0;
   transition: margin-top .3s;
+}
+.header .barraDeBaixo #menuPrincipal .boxPreto.boxAtual {
+  margin-top: -60px;
+  border-top: solid 4px #2C97BE;
 }
 @media (max-width: 960px) {
   .header .barraDeBaixo #menuPrincipal .boxPreto {
@@ -438,6 +445,17 @@ input[type="search"] {
     margin-top: initial;
   }
 }
+.header .barraDeBaixo #menuPrincipal .boxPreto:nth-child(3) .cadaItem .icone {
+  margin-bottom: 3px;
+}
+.header .barraDeBaixo #menuPrincipal .boxPreto:nth-child(3) .cadaItem h3 {
+  margin-bottom: 10px;
+}
+@media (max-width: 960px) {
+  .header .barraDeBaixo #menuPrincipal .boxPreto:nth-child(3) .cadaItem h3 {
+    margin: 0;
+  }
+}
 .header .barraDeBaixo #menuPrincipal .boxPreto .cadaItem {
   display: block;
   color: #fff;
@@ -449,7 +467,7 @@ input[type="search"] {
 }
 .header .barraDeBaixo #menuPrincipal .boxPreto .cadaItem .icone {
   display: inline-block;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 @media (max-width: 960px) {
   .header .barraDeBaixo #menuPrincipal .boxPreto .cadaItem .icone {
@@ -572,7 +590,7 @@ input[type="search"] {
 .header .header__menu a:hover {
   opacity: 1;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   .header .header__menu {
     display: block;
   }
@@ -652,30 +670,37 @@ input[type="search"] {
 
 .botaoTopo {
   background-image: url(sprite.png);
-  background-position: -389px -62px;
+  background-position: -389px -143px;
   width: 201px;
   height: 70px;
 }
 
 .boxPreto {
   background-image: url(sprite.png);
-  background-position: -231px 0px;
+  background-position: -231px -63px;
   width: 158px;
   height: 181px;
 }
 
 .desce {
   background-image: url(sprite.png);
-  background-position: -389px -132px;
+  background-position: -835px -143px;
   width: 177px;
   height: 26px;
 }
 
 .flamula {
   background-image: url(sprite.png);
-  background-position: -389px 0px;
+  background-position: -819px -63px;
   width: 227px;
   height: 62px;
+}
+
+.greatPlace {
+  background-image: url(sprite.png);
+  background-position: -389px -63px;
+  width: 194px;
+  height: 80px;
 }
 
 .imagemQuemSomos {
@@ -687,84 +712,105 @@ input[type="search"] {
 
 .itemLateral {
   background-image: url(sprite.png);
-  background-position: 0px -319px;
+  background-position: -583px -63px;
   width: 236px;
   height: 65px;
 }
 
 .menu1 {
   background-image: url(sprite.png);
-  background-position: -419px -184px;
-  width: 30px;
-  height: 30px;
+  background-position: -1108px -63px;
+  width: 31px;
+  height: 31px;
 }
 
 .menu2 {
   background-image: url(sprite.png);
-  background-position: -449px -184px;
-  width: 30px;
-  height: 30px;
+  background-position: -1139px -63px;
+  width: 31px;
+  height: 31px;
 }
 
 .menu3 {
   background-image: url(sprite.png);
-  background-position: -389px -184px;
-  width: 30px;
-  height: 30px;
+  background-position: -1170px -63px;
+  width: 31px;
+  height: 31px;
+}
+
+.menu4 {
+  background-image: url(sprite.png);
+  background-position: -1046px -63px;
+  width: 31px;
+  height: 31px;
+}
+
+.menu5 {
+  background-image: url(sprite.png);
+  background-position: -1077px -63px;
+  width: 31px;
+  height: 31px;
 }
 
 .menuAzul1 {
   background-image: url(sprite.png);
-  background-position: -590px -104px;
+  background-position: -1088px -94px;
   width: 21px;
   height: 21px;
 }
 
 .menuAzul2 {
   background-image: url(sprite.png);
-  background-position: -590px -83px;
+  background-position: -1067px -94px;
   width: 21px;
   height: 21px;
 }
 
 .menuAzul3 {
   background-image: url(sprite.png);
-  background-position: -590px -62px;
+  background-position: -1046px -94px;
   width: 21px;
   height: 21px;
 }
 
+.pessoasTopo {
+  background-image: url(sprite.png);
+  background-position: -231px 0px;
+  width: 980px;
+  height: 63px;
+}
+
 .setinhaDireita {
   background-image: url(sprite.png);
-  background-position: -566px -144px;
+  background-position: -1201px -63px;
   width: 10px;
   height: 10px;
 }
 
 .sobe {
   background-image: url(sprite.png);
-  background-position: -389px -158px;
+  background-position: -1012px -143px;
   width: 177px;
   height: 26px;
 }
 
 .vai {
   background-image: url(sprite.png);
-  background-position: -566px -132px;
+  background-position: -1109px -94px;
   width: 25px;
   height: 12px;
 }
 
 .verMais {
   background-image: url(sprite.png);
-  background-position: 0px -384px;
+  background-position: -590px -143px;
   width: 245px;
   height: 54px;
 }
 
 .volta {
   background-image: url(sprite.png);
-  background-position: -591px -132px;
+  background-position: -1134px -94px;
   width: 25px;
   height: 12px;
 }
@@ -784,7 +830,7 @@ aside.sideNoticias {
   margin-left: 0.8333333333%;
   margin-right: 0.8333333333%;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   aside.sideNoticias {
     width: 100%;
     float: left;
@@ -839,7 +885,7 @@ aside.sideDownloads {
   margin-right: 0.8333333333%;
   background-color: #e6e6e6;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   aside.sideDownloads {
     width: 100%;
     float: left;
@@ -911,7 +957,7 @@ aside.sideDownloads #sidebarDownloads .maisDownloads li hr {
 .footer {
   margin-top: 50px;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   .footer {
     max-width: 100%;
     margin-left: auto;
@@ -942,7 +988,7 @@ aside.sideDownloads #sidebarDownloads .maisDownloads li hr {
   border-right: solid 1px #fff;
   padding-right: 20px;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   .footer .azul .footerMenu {
     width: 98.3333333333%;
     float: left;
@@ -969,7 +1015,7 @@ aside.sideDownloads #sidebarDownloads .maisDownloads li hr {
   font-size: 1.4rem;
   line-height: 1;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   .footer .azul #menuInstitucional {
     border-right: none;
     padding-right: 0;
@@ -977,10 +1023,12 @@ aside.sideDownloads #sidebarDownloads .maisDownloads li hr {
   }
 }
 .footer .azul .telefone {
-  width: 23.3333333333%;
+  width: 19.1666666667%;
   float: right;
   margin-left: 0.8333333333%;
   margin-right: 0.8333333333%;
+  text-align: right;
+  float: right;
 }
 @media (max-width: 960px) {
   .footer .azul .telefone {
@@ -991,11 +1039,12 @@ aside.sideDownloads #sidebarDownloads .maisDownloads li hr {
   }
 }
 .footer .azul .telefone h3 {
-  font-size: 3.4rem;
+  font-size: 4rem;
   font-weight: 500;
+  margin: 0;
 }
 .footer .azul .telefone h3 span {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 @media (max-width: 960px) {
   .footer .azul .telefone h3 {
@@ -1010,11 +1059,25 @@ aside.sideDownloads #sidebarDownloads .maisDownloads li hr {
     margin: 0;
   }
 }
+.footer .azul .telefone a {
+  color: #fff;
+}
+.footer .azul .telefone a.email {
+  font-size: 1.2rem;
+}
+.footer .azul .telefone a.faleConosco {
+  margin-top: 5px;
+  display: block;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
 .footer .azul .telefone .redesSociais .cadaRede {
-  width: 20%;
-  float: left;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
+  display: block;
+  float: right;
+  margin: 0 7px;
 }
 .footer .preto {
   width: 100%;
@@ -1151,7 +1214,7 @@ aside.sideDownloads #sidebarDownloads .maisDownloads li hr {
   margin-left: 0.8333333333%;
   margin-right: 0.8333333333%;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   #noticias {
     width: 100%;
     float: left;
@@ -1163,7 +1226,7 @@ aside.sideDownloads #sidebarDownloads .maisDownloads li hr {
   margin-left: 2%;
   margin-right: 2%;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   #noticias .primeiraNoticia {
     width: 100%;
     float: left;
@@ -1183,7 +1246,7 @@ aside.sideDownloads #sidebarDownloads .maisDownloads li hr {
   height: 210px;
   position: relative;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   #noticias .noticiasSecundarias {
     width: 100%;
     float: left;
@@ -1210,7 +1273,7 @@ aside.sideDownloads #sidebarDownloads .maisDownloads li hr {
   margin-left: 0.8333333333%;
   margin-right: 0.8333333333%;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   #videos {
     width: 100%;
     float: left;
@@ -1228,7 +1291,7 @@ aside.sideDownloads #sidebarDownloads .maisDownloads li hr {
   width: 220px;
   height: 152px;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   #videos .video .fotoVideo {
     margin: auto;
     position: relative;
@@ -1237,14 +1300,16 @@ aside.sideDownloads #sidebarDownloads .maisDownloads li hr {
 #videos .verMais {
   display: block;
   margin-top: 10px;
-  margin-left: -10px;
-  width: 230px;
+  margin-left: 0;
+  width: 100%;
+  background: none;
+  background-color: #17243e;
   color: #fff;
   text-transform: uppercase;
   text-align: center;
   line-height: 54px;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   #videos .verMais {
     margin: auto;
   }
@@ -1256,7 +1321,7 @@ aside.sideDownloads #sidebarDownloads .maisDownloads li hr {
   margin-left: 0.8333333333%;
   margin-right: 0.8333333333%;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   #downloads {
     width: 100%;
     float: left;
@@ -1275,7 +1340,7 @@ aside.sideDownloads #sidebarDownloads .maisDownloads li hr {
   margin-left: 0.8333333333%;
   margin-right: 0.8333333333%;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   #contato {
     width: 100%;
     float: left;
@@ -1321,7 +1386,7 @@ a.item-diferente {
 .resp-tab-item {
   width: 236px !important;
   height: 65px !important;
-  background: url("sprite.png") 0px -319px no-repeat !important;
+  background: url("sprite.png") -583px -63px no-repeat !important;
   margin-right: 0;
   color: #fff;
   text-align: center;
@@ -1516,7 +1581,7 @@ article:after {
   margin-left: 0.8333333333%;
   margin-right: 0.8333333333%;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   .single section .type-post {
     width: 100%;
     float: left;
@@ -1529,7 +1594,7 @@ article:after {
   margin-right: 1%;
   margin-top: 20px;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   .single section .type-post img {
     width: 100%;
     float: left;
@@ -1542,7 +1607,7 @@ article:after {
   margin-left: 1%;
   margin-right: 1%;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   .single section .type-post p {
     width: 80%;
     float: left;
@@ -1556,7 +1621,7 @@ article:after {
   background-color: #fff;
   padding: 0 10px;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   .single section .type-downloads {
     width: 100%;
     float: left;
@@ -1588,7 +1653,7 @@ article:after {
   float: left;
   margin-top: 20px;
 }
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   .single section .type-downloads img {
     margin: 0 0 0 -2px;
   }
@@ -1602,21 +1667,24 @@ article:after {
   margin-top: 30px;
 }
 
-#menuInstitucional {
+#emPessoas {
   list-style: none;
   padding: 0;
+  margin: 50px auto;
   overflow: hidden;
+  text-align: center;
+  width: 603px;
 }
-#menuInstitucional li.botaoTopo {
-  display: block;
+#emPessoas li.botaoTopo {
+  display: inline-block;
   float: left;
   text-align: center;
   padding: 0;
   margin: 0;
   width: 180px;
 }
-@media (max-width: 960px) {
-  #menuInstitucional li.botaoTopo {
+@media (max-width: 1280px) {
+  #emPessoas li.botaoTopo {
     background-image: none;
     background-color: #17243E;
     margin: 2px 0;
@@ -1627,14 +1695,14 @@ article:after {
     margin-right: 10%;
   }
 }
-#menuInstitucional li.botaoTopo a {
+#emPessoas li.botaoTopo a {
   color: #fff;
   padding: 0 10px;
   margin-top: 10px;
   display: block;
 }
-@media (max-width: 960px) {
-  #menuInstitucional li.botaoTopo a {
+@media (max-width: 1280px) {
+  #emPessoas li.botaoTopo a {
     line-height: 3;
     margin-top: 0;
   }
@@ -1670,4 +1738,89 @@ article:after {
   margin: auto;
 }
 
-/*# sourceMappingURL=style.css.map */
+#videoPessoas {
+  width: 100%;
+  height: 400px;
+  display: block;
+  margin: 0 auto 50px;
+  background: #5E5E5D url("img/video.png") no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.boxPessoas {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-color: #919190 !important;
+  background-position: 300px top !important;
+  background-size: contain !important;
+  height: 250px;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.boxPessoas:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.boxPessoas h2 {
+  display: block;
+  border-bottom: 1px solid #fff;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  line-height: 1;
+  margin: 0;
+}
+.boxPessoas#box1 {
+  background: url(img/preEngBanner.png) no-repeat;
+}
+.boxPessoas#box2 {
+  background: url(img/preFabBanner.png) no-repeat;
+}
+.boxPessoas#box3 {
+  background: url(img/linHabBanner.png) no-repeat;
+}
+.boxPessoas#box4 {
+  background: url(img/dnaPreBanner.png) no-repeat;
+}
+
+.page-template-template-pessoas .pageCabecalho {
+  height: 200px;
+  padding: 0 20px;
+  border-top: 10px solid #2C97BE;
+  border-bottom: 10px solid #2C97BE;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #2C97BE;
+  background-position: right top;
+}
+.page-template-template-pessoas .pageCabecalho h1 {
+  color: #fff;
+  font-size: 4rem;
+  max-width: 300px;
+  line-height: .9;
+  margin: 0;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+}
+.page-template-template-pessoas .pageConteudo {
+  background-color: #dddddd;
+  padding: 20px;
+  margin-top: 10px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  overflow: hidden;
+}
+.page-template-template-pessoas .pageConteudo #voltar {
+  display: block;
+  padding: 10px 20px;
+  border: 1px solid #5E5E5D;
+  float: right;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
