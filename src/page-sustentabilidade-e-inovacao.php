@@ -7,12 +7,22 @@
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 
-			<?php the_breadcrumb(); ?>
+			<?php if (!is_home() && !is_page('home')) { the_breadcrumb(); } ?>
 
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<?php the_content(); ?>
+				<a href="<?php echo get_site_url(); ?>/sustentabilidade-e-inovacao/incentivo-a-inovacao/" class="boxPessoas" id="sus1">
+					<h2>Incentivo <br> à inovação</h2>
+				</a>
+
+				<a href="<?php echo get_site_url(); ?>/sustentabilidade-e-inovacao/incentivo-a-sustentabilidade/" class="boxPessoas" id="sus2">
+					<h2>Incentivo <br> à sustentabilidade</h2>
+				</a>
+
+				<a href="<?php echo get_site_url(); ?>/sustentabilidade-e-inovacao/desenvolvimento-humano-acoes-socioculturais/" class="boxPessoas" id="sus3">
+					<h2>Desenvolvimento humano <br> ações socioculturais</h2>
+				</a>
 
 				<br class="clear">
 

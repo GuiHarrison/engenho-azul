@@ -11,7 +11,8 @@
 							<?php
 								$queryInst = new WP_Query( array(
 									'post_parent' => 21,
-									'post_type' => 'page'
+									'post_type' => 'page',
+									'posts_per_page' => 4
 								) );
 
 								if ( $queryInst->have_posts() ) {
@@ -28,26 +29,12 @@
 								}
 							?>
 						</ul>
-						<ul id="menuNoticias" class="contato footerMenu">
-							<h4>Notícias</h4>
-							<?php
-								$queryInst = new WP_Query( array(
-									'post_per_page' => 4
-								) );
-
-								if ( $queryInst->have_posts() ) {
-
-									while ($queryInst->have_posts()) : $queryInst->the_post();
-										echo
-										'<li><a href="' . post_permalink() . '">';
-											the_title();
-										echo '</a></li>';
-									endwhile;
-
-								} else {
-									echo "<h2>Post não encontrado</h2>";
-								}
-							?>
+						<ul id="menuInstitucional" class="institucional footerMenu">
+							<h4>Pessoas</h4>
+							<li><a href="#_">Vagas</a></li>
+						</ul>
+						<ul id="menuInstitucional" class="institucional footerMenu">
+							<li><h4><a href="<?php echo get_permalink( '31' ); ?>">Inovação e sustentabilidade</a></h4></li>
 						</ul>
 						<ul id="menuDownloads" class="contato footerMenu">
 							<h4>Downloads</h4>

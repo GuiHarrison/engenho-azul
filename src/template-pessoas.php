@@ -4,6 +4,8 @@
 		<!-- section -->
 		<section>
 
+		<?php if ( is_page( '59' || '54' || '145' ) ) { echo get_template_part('escolhaPessoas'); } else { echo get_template_part('escolhaInstitucional'); }  ?>
+
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 			<?php if (!is_home() && !is_page('home')) { the_breadcrumb(); } ?>

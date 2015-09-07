@@ -40,26 +40,26 @@
 			<header class="header clear <?php if (wp_is_mobile()) { echo 'menuAberto'; } ?>" role="banner">
 
 				<div class="wrapper">
-				<div class="barraDeCima">
+					<div class="barraDeCima">
 
-					<!-- logo -->
-					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-						</a>
-					</div>
-					<!-- /logo -->
-					<!-- menu para escolher portal -->
-					<ul class="qualPortal">
-						<li><a class="current" href="ingage.guiharrison.com/precon2">Institucional</a></li>
-						<li><a href="#">Pré-fabricado de concreto</a></li>
-						<li><a href="http://www.meuprecon.com.br">Venda de imóveis</a></li>
-					</ul>
-					<!-- /menu para escolher portal -->
+						<!-- logo -->
+						<div class="logo">
+							<a href="<?php echo home_url(); ?>">
+								<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+							</a>
+						</div>
+						<!-- /logo -->
+						<!-- menu para escolher portal -->
+						<ul class="qualPortal">
+							<li><a class="current" href="ingage.guiharrison.com/precon2">Institucional</a></li>
+							<li><a href="#">Pré-fabricado de concreto</a></li>
+							<li><a href="http://www.meuprecon.com.br">Venda de imóveis</a></li>
+						</ul>
+						<!-- /menu para escolher portal -->
 
-					<!-- telefone -->
-					<div id="telefoneHead"><h2><span>(31)</span> <?php if (kirki_get_option( 'telefone' )) { echo kirki_get_option( 'telefone' );} ?></h2></div>
+						<!-- telefone -->
+						<div id="telefoneHead"><h2><span>(31)</span> <?php if (kirki_get_option( 'telefone' )) { echo kirki_get_option( 'telefone' );} ?></h2></div>
 
 					</div>
 				</div>
@@ -99,13 +99,7 @@
 						</li>
 
 						<li class="boxPreto">
-							<a href="<?php
-								$args = array( 'numberposts' => 1, 'post_type' => 'downloads' );
-								$lastposts = get_posts( $args );
-								foreach($lastposts as $post) : setup_postdata($post);
-								echo the_permalink();
-								endforeach;
-							?>" class="cadaItem" id="itemMenu3">
+							<a href="<?php echo get_permalink( '31' ); ?>" class="cadaItem" id="itemMenu3">
 								<span class="icone menu3"></span>
 								<span class="iconeA menuAzul3"></span>
 								<h3 class="menuTitulo">Inovação e Sustentabilidade</h3>
