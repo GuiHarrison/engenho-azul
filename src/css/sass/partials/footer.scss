@@ -75,7 +75,7 @@
 		}
 
 		.telefone {
-			@include span(last 2.5);
+			@include span(last 3);
 			text-align: right;
 			float: right;
 

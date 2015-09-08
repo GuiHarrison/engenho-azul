@@ -1,4 +1,4 @@
-<?php /* Template Name: internas */ get_header(); ?>
+<?php /* Template Name: pessoas */ get_header(); ?>
 
 	<main role="main">
 		<!-- section -->

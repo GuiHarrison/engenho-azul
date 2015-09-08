@@ -1028,7 +1028,7 @@ aside.sideDownloads #sidebarDownloads .maisDownloads li hr {
   }
 }
 .footer .azul .telefone {
-  width: 19.1666666667%;
+  width: 23.3333333333%;
   float: right;
   margin-left: 0.8333333333%;
   margin-right: 0.8333333333%;
@@ -1681,7 +1681,7 @@ article:after {
   width: 603px;
 }
 #emInstitucional li.botaoTopo {
-  display: inline-block;
+  display: table;
   float: left;
   text-align: center;
   padding: 0;
@@ -1704,7 +1704,12 @@ article:after {
   color: #fff;
   padding: 0 10px;
   margin-top: 10px;
-  display: block;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1.6rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 @media (max-width: 960px) {
   #emInstitucional li.botaoTopo a {
@@ -1765,11 +1770,16 @@ article:after {
   color: #fff;
   padding: 10px;
   margin-bottom: 10px;
+  transition: background-color .4s;
 }
 .boxPessoas:after {
   content: " ";
   display: block;
   clear: both;
+}
+.boxPessoas:hover {
+  background-color: #2C97BE !important;
+  opacity: 1;
 }
 .boxPessoas h2 {
   display: block;
@@ -1937,5 +1947,3 @@ article:after {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-
-/*# sourceMappingURL=style.css.map */

@@ -254,7 +254,7 @@ article {
 	width: $botao-topo-width*3;
 
 	li.botaoTopo {
-		display: inline-block;
+		display: table;
 		float: left;
 		text-align: center;
 		padding: 0;
@@ -273,7 +273,13 @@ article {
 			color: #fff;
 			padding: 0 10px;
 			margin-top: 10px;
-			display: block;
+			display: table-cell;
+			vertical-align: middle;
+			font-size: 1.6rem;
+			line-height: 1;
+
+			text-transform: uppercase;
+			font-weight: 500;
 
 			@include susy-media (max-width 960px) {
 				line-height: 3;
@@ -339,6 +345,13 @@ article {
 	color: #fff;
 	padding: 10px;
 	margin-bottom: 10px;
+
+	transition: background-color .4s;
+
+	&:hover {
+		background-color: $azul !important;
+		opacity: 1;
+	}
 
 	h2 {
 		display: block;
