@@ -110,10 +110,15 @@
 {
     display: block;
 
-    /*height: auto;*/
-
     /*border: 1px solid transparent;*/
 }
+
+.slick-vertical .itemNoticias.slick-slide {
+
+    height: 80px;
+
+}
+
 .slick-arrow.slick-hidden {
     display: none;
 }

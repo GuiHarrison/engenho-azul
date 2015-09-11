@@ -9,7 +9,7 @@
 
 			<?php the_breadcrumb(); ?>
 
-			<?php echo get_template_part('escolhaPessoas'); ?>
+			<?php echo get_template_part('escolhaInstitucional'); ?>
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 

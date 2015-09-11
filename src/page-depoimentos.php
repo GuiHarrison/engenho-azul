@@ -9,7 +9,7 @@
 
 			<?php if (!is_home() && !is_page('home')) { the_breadcrumb(); } ?>
 
-			<?php echo get_template_part('escolhaInstitucional'); ?>
+			<?php echo get_template_part('escolhaPessoas'); ?>
 
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

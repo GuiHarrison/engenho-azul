@@ -162,10 +162,10 @@ article {
 
 	section {
 		@include container();
-		background-color: #e6e6e6;
+		// background-color: #e6e6e6;
 
 		.type-post {
-			@include span(last 9);
+			@include span(last 8);
 
 			@include susy-media (max-width 960px) {
 				@include span(1 of 1 0);
@@ -182,7 +182,7 @@ article {
 			}
 
 			p {
-				@include span(6 of 10);
+				@include span(last 6 of 10);
 
 				@include susy-media (max-width 960px) {
 					@include span(1 of 1);
@@ -191,8 +191,7 @@ article {
 		}
 
 		.type-downloads {
-			@include span(last 7 of 12 0);
-			background-color: #fff;
+			@include span(last 9 of 12 0);
 			padding: 0 10px;
 
 			@include susy-media (max-width 960px) {
@@ -242,6 +241,7 @@ article {
 	#singleDownloads {
 		background-color: #fff;
 		margin-top: 30px;
+		background-color: #e6e6e6;
 	}
 }
 
@@ -275,11 +275,13 @@ article {
 			margin-top: 10px;
 			display: table-cell;
 			vertical-align: middle;
-			font-size: 1.6rem;
-			line-height: 1;
-
 			text-transform: uppercase;
 			font-weight: 500;
+			font-size: 1.4rem;
+
+			&:hover {
+				color: $azul;
+			}
 
 			@include susy-media (max-width 960px) {
 				line-height: 3;
@@ -290,25 +292,41 @@ article {
 }
 
 #trabalheConosco {
-	border-top: 1px solid;
-	color: $azul;
-	margin-top: 50px;
+	position: relative;
+	border: 8px double;
+	color: #fff;
+	margin-top: 10px;
+	background-color: $azul;
+	padding: 0 20px;
 
-	.cadaTrabalhe {
-		@include span(6);
+	h4 {
+		font-size: 150%;
+		font-weight: 300;
 	}
 
-	.trabalheL {
+	.seloEbotao {
+		position: absolute;
+		right: 15px;
+		bottom: 10px;
+		height: 80px;
 
-	}
+		.selo, .botaoLaranja {
+			display: inline-block;
+			vertical-align: bottom;
+		}
 
-	.trabalheR {
-		text-align: center;
-	}
-
-	h2 {
-		text-align: center;
-		text-transform: uppercase;
+		.botaoLaranja {
+			height: 54px;
+			margin-bottom: 5px;
+			padding: 15px 40px;
+			background-color: #C46600;
+			color: #fff;
+			font-size: 1.6rem;
+			text-transform: uppercase;
+			font-weight: 600;
+			text-align: center;
+			box-shadow: 0 3px 3px rgba(#000, .5);
+		}
 	}
 }
 
@@ -341,16 +359,16 @@ article {
 	background-color: lighten($cinza, 20) !important;
 	background-position: right top !important;
 	background-size: contain !important;
-	height: 200px;
+	height: 150px;
 	color: #fff;
 	padding: 10px;
 	margin-bottom: 10px;
 
-	transition: background-color .4s;
+	transition: all .4s;
 
-	&:hover {
+	&.boxPA {
 		background-color: $azul !important;
-		opacity: 1;
+		height: 200px;
 	}
 
 	h2 {
@@ -386,9 +404,24 @@ article {
 	}
 }
 
+.bgCinza {
+	background-color: #eaeaea;
+	padding: 20px;
+	margin-bottom: 40px;
+	overflow: hidden;
+	transition: all .4s;
+
+	&.fechaBGC {
+		height: 0;
+		margin: 0;
+		padding: 0 20px;
+	}
+}
+
+
 // Page pessoas
 
-.page-template-template-pessoas {
+.page-template-template-pessoas, .contato, .pessoas {
 
 	.pageCabecalho {
 		height: 200px;
@@ -404,7 +437,7 @@ article {
 
 		h1 {
 			color: #fff;
-			font-size: 4rem;
+			font-size: 3rem;
 			max-width: 300px;
 			line-height: .9;
 			margin: 0;
@@ -418,8 +451,6 @@ article {
 		background-color: lighten($cinza, 50);
 		padding: 20px;
 		margin-top: 10px;
-		font-size: 1.8rem;
-		font-weight: 500;
 		overflow: hidden;
 
 		#voltar {

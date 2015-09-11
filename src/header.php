@@ -37,7 +37,7 @@
 
 
 			<!-- header -->
-			<header class="header clear <?php if (wp_is_mobile()) { echo 'menuAberto'; } ?>" role="banner">
+			<header class="header clear <?php if (wp_is_mobile()) { echo 'menuAberto'; } elseif (!is_page('home')) { echo 'menorNasInternas'; } ?>" role="banner">
 
 				<div class="wrapper">
 					<div class="barraDeCima">
@@ -52,8 +52,8 @@
 						<!-- /logo -->
 						<!-- menu para escolher portal -->
 						<ul class="qualPortal">
-							<li><a class="current" href="ingage.guiharrison.com/precon2">Institucional</a></li>
-							<li><a href="#">Pré-fabricado de concreto</a></li>
+							<li><a class="current" href="http://ingage.guiharrison.com/precon2">Institucional</a></li>
+							<li><a href="http://ingage.guiharrison.com/precon">Pré-fabricado de concreto</a></li>
 							<li><a href="http://www.meuprecon.com.br">Venda de imóveis</a></li>
 						</ul>
 						<!-- /menu para escolher portal -->

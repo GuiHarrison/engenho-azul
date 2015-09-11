@@ -16,28 +16,41 @@
 
 				<div id="videoPessoas"></div>
 
-				<a href="<?php echo get_permalink('99'); ?>" class="boxPessoas" id="box1">
-					<h2>Precon <br> Engenharia</h2>
-				</a>
-				<a href="<?php echo get_permalink('105'); ?>" class="boxPessoas" id="box2">
-					<h2>Pré-Fabricados <br> de Concreto</h2>
-				</a>
-				<a href="<?php echo get_permalink('107'); ?>" class="boxPessoas" id="box3">
-					<h2>Linha <br> Habitacional</h2>
-				</a>
-				<a href="<?php echo get_permalink('109'); ?>" class="boxPessoas" id="box4">
-					<h2>DNA Grupo<br> Precon</h2>
-				</a>
+				<div class="cadaQuemSomos" id="boxPE">
+					<a href="<?php echo '#_'; //echo get_permalink('99'); ?>" class="boxPessoas" id="box1">
+						<h2>Precon <br> Engenharia</h2>
+					</a>
+					<div class="bgCinza">
+						<?php the_field('pe'); ?>
+					</div>
+				</div>
 
-				<!-- <div id="trabalheConosco">
-				<div class="trabalheL cadaTrabalhe">
-					<h4>Um reconhecimento recente que comprova o sucesso desta cultura foi o prêmio concedido pelo Great Place to Work como a 4ª MELHOR EMPRESA PARA SE TRABALHAR EM MINAS GERAIS.</h4>
+				<div class="cadaQuemSomos" id="boxPFC">
+					<a href="<?php echo '#_'; //echo get_permalink('105'); ?>" class="boxPessoas" id="box2">
+						<h2>Pré-Fabricados <br> de Concreto</h2>
+					</a>
+					<div class="bgCinza">
+						<?php the_field('pfc'); ?>
+					</div>
 				</div>
-				<div class="trabalheR cadaTrabalhe">
-					<p>Se identificou?! Então venha fazer parte do nosso time!</p>
-					<a href="http://www.vagas.com.br/vagas-de-precon" target="_blank" class="verMais">Vagas</a>
+
+				<div class="cadaQuemSomos" id="boxLH">
+					<a href="<?php echo '#_'; //echo get_permalink('107'); ?>" class="boxPessoas" id="box3">
+						<h2>Linha <br> Habitacional</h2>
+					</a>
+					<div class="bgCinza">
+						<?php the_field('lh'); ?>
+					</div>
 				</div>
-				</div> -->
+
+				<div class="cadaQuemSomos" id="boxDGP">
+					<a href="<?php echo '#_'; //echo get_permalink('109'); ?>" class="boxPessoas" id="box4">
+						<h2>DNA Grupo<br> Precon</h2>
+					</a>
+					<div class="bgCinza">
+						<?php the_field('dna'); ?>
+					</div>
+				</div>
 
 				<br class="clear">
 
@@ -47,16 +60,6 @@
 			<!-- /article -->
 
 		<?php endwhile; ?>
-
-		<?php else: ?>
-
-			<!-- article -->
-			<article>
-
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-
-			</article>
-			<!-- /article -->
 
 		<?php endif; ?>
 

@@ -14,7 +14,6 @@
 
 			<div class="downloadSingle">
 				<h1><?php the_title(); ?></h1>
-				<h2><?php echo get_field('subtitulo') ?></h2>
 			</div>
 
 				<!-- post thumbnail -->
@@ -27,14 +26,14 @@
 				?>
 				<!-- /post thumbnail -->
 
-				
 				<?php the_content(); // Dynamic Content ?>
-				<?php
 
+				<?php
 				echo '<a class="verMais" href="';
 					the_field("download");
-				echo '">Download</a>'; ?>
-				
+				echo '">Download</a>';
+				?>
+
 				<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
 
 			</article>
@@ -54,7 +53,44 @@
 
 		<?php endif; ?>
 
-		<?php get_sidebar(); ?>
+		<!-- aside -->
+		<aside class="sidebar sideDownloads" role="complementary">
+
+		<button id="btVolta" class="ctrl"><span class="volta"></span></button>
+		<div id="sidebarDownloads">
+			<ul class="maisDownloads">
+
+				<?php
+						$attr = array(
+							'posts_per_page' => -1,
+							'post_type' => 'downloads'
+						);
+
+						$wp_query = new WP_Query($attr);
+
+						if ( $wp_query->have_posts() ) {
+							while ($wp_query->have_posts()) : $wp_query->the_post();
+
+							echo '<li class="itemLateral">';
+
+								echo '<a href="' . post_permalink() . '">';
+										the_title();
+								echo '</a>';
+
+							echo '</li>';
+
+							endwhile;
+						}
+
+						wp_reset_postdata();
+				?>
+
+			</ul>
+		</div>
+		<button id="btVai" class="ctrl"><span class="vai"></span></button>
+
+		</aside>
+		<!-- /aside -->
 
 		</section>
 		<!-- /section -->

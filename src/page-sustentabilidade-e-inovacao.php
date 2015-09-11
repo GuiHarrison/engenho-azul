@@ -12,17 +12,32 @@
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<a href="<?php echo get_site_url(); ?>/sustentabilidade-e-inovacao/incentivo-a-inovacao/" class="boxPessoas" id="sus1">
-					<h2>Incentivo <br> à inovação</h2>
-				</a>
+				<div class="cadaQuemSomos" id="boxPE">
+					<a href="#_" class="boxPessoas" id="sus1">
+						<h2>Incentivo <br> à inovação</h2>
+					</a>
+					<div class="bgCinza">
+						<?php the_field('iai'); ?>
+					</div>
+				</div>
 
-				<a href="<?php echo get_site_url(); ?>/sustentabilidade-e-inovacao/incentivo-a-sustentabilidade/" class="boxPessoas" id="sus2">
-					<h2>Incentivo <br> à sustentabilidade</h2>
-				</a>
+				<div class="cadaQuemSomos" id="boxPE">
+					<a href="#_" class="boxPessoas" id="sus2">
+						<h2>Incentivo <br> à sustentabilidade</h2>
+					</a>
+					<div class="bgCinza">
+						<?php the_field('ias'); ?>
+					</div>
+				</div>
 
-				<a href="<?php echo get_site_url(); ?>/sustentabilidade-e-inovacao/desenvolvimento-humano-acoes-socioculturais/" class="boxPessoas" id="sus3">
-					<h2>Desenvolvimento humano <br> ações socioculturais</h2>
-				</a>
+				<div class="cadaQuemSomos" id="boxPE">
+					<a href="#_" class="boxPessoas" id="sus3">
+						<h2>Desenvolvimento humano <br> ações socioculturais</h2>
+					</a>
+					<div class="bgCinza">
+						<?php the_field('dhas'); ?>
+					</div>
+				</div>
 
 				<br class="clear">
 

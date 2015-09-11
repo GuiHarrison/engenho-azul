@@ -7,12 +7,28 @@
 				<section class="azul">
 					<div class="wrapper">
 						<ul id="menuInstitucional" class="institucional footerMenu">
-							<h4>Institucional</h4>
+							<li><h4>Institucional</h4></li>
+							<li><a href="<?php echo get_permalink('23'); ?>">Quem Somos</a></li>
+							<li><a href="<?php echo get_permalink('56'); ?>">Prêmios e Certificações</a></li>
+							<li><a href="<?php echo get_permalink('29'); ?>">Governança</a></li>
+						</ul>
+						<ul id="menuPessoas" class="pessoas footerMenu">
+							<li><h4>Pessoas</h4></li>
+							<li><a href="<?php echo get_permalink('54'); ?>">DNA Precon Engenharia</a></li>
+							<li><a href="<?php echo get_permalink('134'); ?>">Depoimentos</a></li>
+							<li><a href="<?php echo get_permalink('35'); ?>">Envie seu currículo</a></li>
+						</ul>
+						<ul id="menuInovacao" class="inovacao footerMenu">
+							<li><h4><a href="<?php echo get_permalink( '31' ); ?>">Inovação e sustentabilidade</a></h4></li>
+							<li><a href="<?php echo get_permalink('217'); ?>">Incentivo à inovação</a></li>
+							<li><a href="<?php echo get_permalink('220'); ?>">Incentivo à sustentabilidade</a></li>
+							<li><a href="<?php echo get_permalink('223'); ?>">Desenvolvimento humano/ações socioculturais</a></li>
+						</ul>
+						<ul id="menuNoticias" class="noticias footerMenu">
+							<h4>Notícias</h4>
 							<?php
 								$queryInst = new WP_Query( array(
-									'post_parent' => 21,
-									'post_type' => 'page',
-									'posts_per_page' => 4
+									'posts_per_page' => 3
 								) );
 
 								if ( $queryInst->have_posts() ) {
@@ -29,19 +45,12 @@
 								}
 							?>
 						</ul>
-						<ul id="menuInstitucional" class="institucional footerMenu">
-							<h4>Pessoas</h4>
-							<li><a href="#_">Vagas</a></li>
-						</ul>
-						<ul id="menuInstitucional" class="institucional footerMenu">
-							<li><h4><a href="<?php echo get_permalink( '31' ); ?>">Inovação e sustentabilidade</a></h4></li>
-						</ul>
 						<ul id="menuDownloads" class="contato footerMenu">
 							<h4>Downloads</h4>
 							<?php
 								$queryInst = new WP_Query( array(
 									'post_type' => 'downloads',
-									'post_per_page' => 4
+									'posts_per_page' => 3
 								) );
 
 								if ( $queryInst->have_posts() ) {

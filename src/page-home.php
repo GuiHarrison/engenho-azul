@@ -115,11 +115,11 @@
 
 			<div id="contato">
 				<h2>Contato</h2>
-				<a href="" class="contatoGeral">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/contatoGeral.jpg" alt="Contato Geral">
+				<a href="<?php echo home_url( '/contato'); ?>" class="contatoGeral">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/contatoGeral.png" alt="Contato Geral">
 				</a>
-				<a href="" class="contatoMeuPrecon">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/contatoMeuPrecon.jpg" alt="Contato Meu Precon">
+				<a href="http://www.meuprecon.com.br/contato/" target="_blank" class="contatoMeuPrecon">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/contatoMeuPrecon.png" alt="Contato Meu Precon">
 				</a>
 			</div>
 

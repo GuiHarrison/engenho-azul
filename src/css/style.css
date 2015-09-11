@@ -205,7 +205,7 @@ input[type="search"] {
  * ---
  */
 .wrapper {
-  width: 1280px;
+  width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
   position: relative;
@@ -223,7 +223,7 @@ input[type="search"] {
 .header {
   position: relative;
   width: 100%;
-  background: url(img/banner.png) center top;
+  background: url(img/banner.png) center 70%;
   background-size: cover;
   height: 100vh;
   min-height: 300px;
@@ -231,6 +231,9 @@ input[type="search"] {
   overflow: hidden;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
   transition: all .5s;
+}
+.header.menorNasInternas {
+  height: 400px;
 }
 .header.headerMenuAberto {
   margin-bottom: 160px;
@@ -308,6 +311,7 @@ input[type="search"] {
 .header .barraDeCima .qualPortal li {
   width: 33.3333333333%;
   float: left;
+  display: table;
 }
 .header .barraDeCima .qualPortal li:nth-child(2) a {
   border: none;
@@ -320,7 +324,8 @@ input[type="search"] {
   text-align: center !important;
   border-left: solid 1px #5E5E5D;
   border-right: solid 1px #5E5E5D;
-  display: block;
+  display: table-cell;
+  vertical-align: middle;
 }
 @media (max-width: 960px) {
   .header .barraDeCima .qualPortal li a {
@@ -824,7 +829,7 @@ input[type="search"] {
  * partials/sidebar
  * ---
  */
-aside.sideNoticias {
+aside.sideDownloads {
   width: 23.3333333333%;
   float: left;
   margin-left: 0.8333333333%;
@@ -832,13 +837,13 @@ aside.sideNoticias {
   max-width: 220px;
 }
 @media (max-width: 960px) {
-  aside.sideNoticias {
+  aside.sideDownloads {
     width: 100%;
     float: left;
     margin-left: 7px;
   }
 }
-aside.sideNoticias .ctrl {
+aside.sideDownloads .ctrl {
   width: 100px;
   height: 30px;
   color: #2C97BE;
@@ -847,27 +852,27 @@ aside.sideNoticias .ctrl {
   display: block;
   margin: auto;
 }
-aside.sideNoticias .ctrl .vai, aside.sideNoticias .ctrl .volta {
+aside.sideDownloads .ctrl .vai, aside.sideDownloads .ctrl .volta {
   display: block;
   margin: auto;
 }
-aside.sideNoticias .ctrl#btVai {
+aside.sideDownloads .ctrl#btVai {
   margin-top: -20px;
   margin-bottom: 20px;
 }
-aside.sideNoticias .ctrl#btVolta {
+aside.sideDownloads .ctrl#btVolta {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-aside.sideNoticias #sidebarNoticias .maisNoticias {
+aside.sideDownloads #sidebarDownloads .maisDownloads {
   list-style: none;
   padding: 0;
   margin-left: -17px;
 }
-aside.sideNoticias #sidebarNoticias .maisNoticias .itemLateral {
+aside.sideDownloads #sidebarDownloads .maisDownloads .itemLateral {
   border: none;
 }
-aside.sideNoticias #sidebarNoticias .maisNoticias .itemLateral a {
+aside.sideDownloads #sidebarDownloads .maisDownloads .itemLateral a {
   display: block;
   color: #fff;
   font-weight: 500;
@@ -879,21 +884,23 @@ aside.sideNoticias #sidebarNoticias .maisNoticias .itemLateral a {
   padding-left: 20px;
 }
 
-aside.sideDownloads {
-  width: 40%;
+aside.sideNoticias {
+  width: 31.6666666667%;
   float: left;
   margin-left: 0.8333333333%;
   margin-right: 0.8333333333%;
   background-color: #e6e6e6;
+  padding: 0 40px;
+  margin-top: 30px;
 }
 @media (max-width: 960px) {
-  aside.sideDownloads {
+  aside.sideNoticias {
     width: 100%;
     float: left;
     margin-left: 7px;
   }
 }
-aside.sideDownloads .ctrl {
+aside.sideNoticias .ctrl {
   width: 150px;
   height: 30px;
   color: #2C97BE;
@@ -902,24 +909,24 @@ aside.sideDownloads .ctrl {
   display: block;
   margin: auto;
 }
-aside.sideDownloads .ctrl .vai, aside.sideDownloads .ctrl .volta {
+aside.sideNoticias .ctrl .vai, aside.sideNoticias .ctrl .volta {
   display: block;
   margin: auto;
 }
-aside.sideDownloads .ctrl#btVai {
+aside.sideNoticias .ctrl#btVai {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-aside.sideDownloads .ctrl#btVolta {
+aside.sideNoticias .ctrl#btVolta {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-aside.sideDownloads #sidebarDownloads .maisDownloads {
+aside.sideNoticias #sidebarNoticias .maisNoticias {
   list-style: none;
   padding: 0;
   margin: 20px 0;
 }
-aside.sideDownloads #sidebarDownloads .maisDownloads li a {
+aside.sideNoticias #sidebarNoticias .maisNoticias li a {
   display: block;
   color: #2C97BE;
   font-weight: 500;
@@ -932,18 +939,18 @@ aside.sideDownloads #sidebarDownloads .maisDownloads li a {
   text-align: center;
   font-family: "myriad-pro",sans-serif;
 }
-aside.sideDownloads #sidebarDownloads .maisDownloads li a h3 {
+aside.sideNoticias #sidebarNoticias .maisNoticias li a h3 {
   margin-bottom: 10px;
   font-size: 1.8rem;
 }
-aside.sideDownloads #sidebarDownloads .maisDownloads li a h4 {
+aside.sideNoticias #sidebarNoticias .maisNoticias li a h4 {
   margin: 0;
   font-size: 1.4rem;
 }
-aside.sideDownloads #sidebarDownloads .maisDownloads li:first-child hr {
+aside.sideNoticias #sidebarNoticias .maisNoticias li:first-child hr {
   display: none;
 }
-aside.sideDownloads #sidebarDownloads .maisDownloads li hr {
+aside.sideNoticias #sidebarNoticias .maisNoticias li hr {
   width: 30%;
   border: none;
   height: 1px;
@@ -982,15 +989,12 @@ aside.sideDownloads #sidebarDownloads .maisDownloads li hr {
 .footer .azul .footerMenu {
   display: block;
   float: left;
-  max-width: 20%;
+  max-width: 15%;
   list-style: none;
   padding: 0 15px;
   border-right: solid 1px #fff;
   padding-right: 20px;
   height: 140px;
-}
-.footer .azul .footerMenu:nth-child(3), .footer .azul .footerMenu:nth-child(4) {
-  max-width: 180px;
 }
 @media (max-width: 960px) {
   .footer .azul .footerMenu {
@@ -1019,6 +1023,9 @@ aside.sideDownloads #sidebarDownloads .maisDownloads li hr {
   font-weight: 100;
   font-size: 1.4rem;
   line-height: 1;
+}
+.footer .azul #menuDownloads {
+  border-right: none;
 }
 @media (max-width: 960px) {
   .footer .azul #menuInstitucional {
@@ -1573,7 +1580,6 @@ article:after {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #e6e6e6;
 }
 .single section:after {
   content: " ";
@@ -1581,7 +1587,7 @@ article:after {
   clear: both;
 }
 .single section .type-post {
-  width: 73.3333333333%;
+  width: 65%;
   float: right;
   margin-left: 0.8333333333%;
   margin-right: 0.8333333333%;
@@ -1608,7 +1614,7 @@ article:after {
 }
 .single section .type-post p {
   width: 58.0%;
-  float: left;
+  float: right;
   margin-left: 1%;
   margin-right: 1%;
 }
@@ -1621,9 +1627,8 @@ article:after {
   }
 }
 .single section .type-downloads {
-  width: 58.3333333333%;
+  width: 75%;
   float: right;
-  background-color: #fff;
   padding: 0 10px;
 }
 @media (max-width: 960px) {
@@ -1670,6 +1675,7 @@ article:after {
 .single #singleDownloads {
   background-color: #fff;
   margin-top: 30px;
+  background-color: #e6e6e6;
 }
 
 #emInstitucional {
@@ -1706,10 +1712,12 @@ article:after {
   margin-top: 10px;
   display: table-cell;
   vertical-align: middle;
-  font-size: 1.6rem;
-  line-height: 1;
   text-transform: uppercase;
   font-weight: 500;
+  font-size: 1.4rem;
+}
+#emInstitucional li.botaoTopo a:hover {
+  color: #2C97BE;
 }
 @media (max-width: 960px) {
   #emInstitucional li.botaoTopo a {
@@ -1719,22 +1727,38 @@ article:after {
 }
 
 #trabalheConosco {
-  border-top: 1px solid;
-  color: #2C97BE;
-  margin-top: 50px;
+  position: relative;
+  border: 8px double;
+  color: #fff;
+  margin-top: 10px;
+  background-color: #2C97BE;
+  padding: 0 20px;
 }
-#trabalheConosco .cadaTrabalhe {
-  width: 48.3333333333%;
-  float: left;
-  margin-left: 0.8333333333%;
-  margin-right: 0.8333333333%;
+#trabalheConosco h4 {
+  font-size: 150%;
+  font-weight: 300;
 }
-#trabalheConosco .trabalheR {
-  text-align: center;
+#trabalheConosco .seloEbotao {
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  height: 80px;
 }
-#trabalheConosco h2 {
-  text-align: center;
+#trabalheConosco .seloEbotao .selo, #trabalheConosco .seloEbotao .botaoLaranja {
+  display: inline-block;
+  vertical-align: bottom;
+}
+#trabalheConosco .seloEbotao .botaoLaranja {
+  height: 54px;
+  margin-bottom: 5px;
+  padding: 15px 40px;
+  background-color: #C46600;
+  color: #fff;
+  font-size: 1.6rem;
   text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .verMais {
@@ -1766,20 +1790,20 @@ article:after {
   background-color: #919190 !important;
   background-position: right top !important;
   background-size: contain !important;
-  height: 200px;
+  height: 150px;
   color: #fff;
   padding: 10px;
   margin-bottom: 10px;
-  transition: background-color .4s;
+  transition: all .4s;
 }
 .boxPessoas:after {
   content: " ";
   display: block;
   clear: both;
 }
-.boxPessoas:hover {
+.boxPessoas.boxPA {
   background-color: #2C97BE !important;
-  opacity: 1;
+  height: 200px;
 }
 .boxPessoas h2 {
   display: block;
@@ -1811,7 +1835,20 @@ article:after {
   background: url(img/inovacaoPessoas.png) no-repeat;
 }
 
-.page-template-template-pessoas .pageCabecalho {
+.bgCinza {
+  background-color: #eaeaea;
+  padding: 20px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  transition: all .4s;
+}
+.bgCinza.fechaBGC {
+  height: 0;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.page-template-template-pessoas .pageCabecalho, .contato .pageCabecalho, .pessoas .pageCabecalho {
   height: 200px;
   padding: 0 20px;
   border-top: 10px solid #2C97BE;
@@ -1822,9 +1859,9 @@ article:after {
   background-color: #2C97BE;
   background-position: right top;
 }
-.page-template-template-pessoas .pageCabecalho h1 {
+.page-template-template-pessoas .pageCabecalho h1, .contato .pageCabecalho h1, .pessoas .pageCabecalho h1 {
   color: #fff;
-  font-size: 4rem;
+  font-size: 3rem;
   max-width: 300px;
   line-height: .9;
   margin: 0;
@@ -1832,15 +1869,13 @@ article:after {
   position: absolute;
   bottom: 0;
 }
-.page-template-template-pessoas .pageConteudo {
+.page-template-template-pessoas .pageConteudo, .contato .pageConteudo, .pessoas .pageConteudo {
   background-color: #dddddd;
   padding: 20px;
   margin-top: 10px;
-  font-size: 1.8rem;
-  font-weight: 500;
   overflow: hidden;
 }
-.page-template-template-pessoas .pageConteudo #voltar {
+.page-template-template-pessoas .pageConteudo #voltar, .contato .pageConteudo #voltar, .pessoas .pageConteudo #voltar {
   display: block;
   padding: 10px 20px;
   border: 1px solid #5E5E5D;
