@@ -8,8 +8,6 @@
 
 		<?php the_breadcrumb(); ?>
 
-	<?php get_sidebar(); ?>
-		
 		<!-- article -->
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 

@@ -30,13 +30,18 @@
 								$queryInst = new WP_Query( array(
 									'posts_per_page' => 3
 								) );
+								$caracteres = "30";
 
 								if ( $queryInst->have_posts() ) {
 
 									while ($queryInst->have_posts()) : $queryInst->the_post();
 										echo
 										'<li><a href="' . post_permalink() . '">';
-											the_title();
+											if (strlen($post->post_title) > $caracteres) {
+												echo substr(the_title($before = '', $after = '', FALSE), 0, $caracteres) . '...';
+											} else {
+												the_title();
+											}
 										echo '</a></li>';
 									endwhile;
 
@@ -58,7 +63,11 @@
 									while ($queryInst->have_posts()) : $queryInst->the_post();
 										echo
 										'<li><a href="' . post_permalink() . '">';
-											the_title();
+											if (strlen($post->post_title) > $caracteres) {
+												echo substr(the_title($before = '', $after = '', FALSE), 0, $caracteres) . '...';
+											} else {
+												the_title();
+											}
 										echo '</a></li>';
 									endwhile;
 

@@ -5,8 +5,6 @@
 var gulp = require( "gulp" ),
 	/** @type {Object} Loader of Gulp plugins from `package.json` */
 	$ = require( "gulp-load-plugins" )(),
-	/** não deu pra pegar o spritesmith pelo gulp-load-plugins **/
-	spritesmith = require("gulp.spritesmith"),
 	/** @type {Array} JS source files to concatenate and uglify */
 	uglifySrc = [
 		/** Modernizr */
@@ -18,6 +16,9 @@ var gulp = require( "gulp" ),
 		/** Page scripts */
 		"src/js/scripts.js"
 	],
+	/** não deu pra pegar o spritesmith pelo gulp-load-plugins **/
+		spritesmith = require("gulp.spritesmith"),
+
 	/** @type {Object of Array} CSS source files to concatenate and minify */
 	cssminSrc = {
 		development: [
@@ -55,6 +56,9 @@ var gulp = require( "gulp" ),
 		return env;
 	} ());
 
+/** Clean */
+gulp.task( "clean", require( "del" ).bind( null, [ ".tmp", "dist" ] ) );
+
 /** Spritesmith */
 
 gulp.task("sprite", function () {
@@ -64,7 +68,7 @@ gulp.task("sprite", function () {
 		imgName: "sprite.png",
 		cssName: "sprite.scss",
 		cssVarMap: function (sprite) {
-			sprite.name = '' + sprite.name;
+			sprite.name = "" + sprite.name;
 		}
 	}));
 
@@ -74,9 +78,6 @@ gulp.task("sprite", function () {
 
   spriteData.pipe(gulp.dest("src/css/sass/modules"));
 });
-
-/** Clean */
-gulp.task( "clean", require( "del" ).bind( null, [ ".tmp", "dist" ] ) );
 
 /** Copy */
 gulp.task( "copy", function() {
@@ -124,6 +125,7 @@ gulp.task( "jshint", function () {
 	return gulp.src( "src/js/{!(lib)/*.js,*.js}" )
 		.pipe( $.jshint() )
 		.pipe( $.jshint.reporter( "jshint-stylish" ) )
+		.pipe( $.jshint.reporter( "fail" ) );
 });
 
 /** Templates */

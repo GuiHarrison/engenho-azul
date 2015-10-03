@@ -30,12 +30,12 @@ if (function_exists('add_theme_support'))
     add_image_size('large', 700, '', true); // Large Thumbnail
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
-    add_image_size('noticiaG', 220, 210, true);
+    add_image_size('noticiaG', 317, 200, true);
     add_image_size('noticiaP', 138, 100, true);
     add_image_size('video', 220, 152, true);
     add_image_size('downloads', 137, 210, true);
     add_image_size('pessoas', 218, 253, true);
-    add_image_size('downloads', 540, 275, true);
+    add_image_size('downloads', 250, 300, true);
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
@@ -70,12 +70,12 @@ if (function_exists('add_theme_support'))
 
 // se é filha ou filho
 
-function is_child($pageID) { 
-    global $post; 
+function is_child($pageID) {
+    global $post;
     if( is_page() && ($post->post_parent==$pageID) ) {
                return true;
-    } else { 
-               return false; 
+    } else {
+               return false;
     }
 }
 
@@ -418,7 +418,7 @@ add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 add_action('init', 'create_post_type_downloads');
-add_action('init', 'create_post_type_videos');
+// add_action('init', 'create_post_type_videos');
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
@@ -470,18 +470,18 @@ function create_post_type_downloads()
     register_post_type('downloads', // Register Custom Post Type
         array(
         'labels' => array(
-            'name' => __('Downloads', 'downloads'), // Rename these to suit
+            'name' => __('Downloads e videos', 'downloads'), // Rename these to suit
             'singular_name' => __('Download', 'downloads'),
             'add_new' => __('Adicionar', 'downloads'),
-            'add_new_item' => __('Adicionar novo Download', 'downloads'),
+            'add_new_item' => __('Adicionar novo Download ou Vídeo', 'downloads'),
             'edit' => __('Editar', 'downloads'),
-            'edit_item' => __('Editar Download', 'downloads'),
-            'new_item' => __('Novo Download', 'downloads'),
-            'view' => __('Ver Download', 'downloads'),
-            'view_item' => __('Ver Download', 'downloads'),
-            'search_items' => __('Procurar Download', 'downloads'),
+            'edit_item' => __('Editar Download ou Video', 'downloads'),
+            'new_item' => __('Novo Download ou Vídeo', 'downloads'),
+            'view' => __('Ver Download ou Video', 'downloads'),
+            'view_item' => __('Ver Download ou Video', 'downloads'),
+            'search_items' => __('Procurar Download ou Video', 'downloads'),
             'not_found' => __('nenhum Download encontrado', 'downloads'),
-            'not_found_in_trash' => __('nenhum Downloads encontrados na lixeira', 'downloads')
+            'not_found_in_trash' => __('nenhum downloads ou vídeo encontrados na lixeira', 'downloads')
         ),
         'public' => true,
         'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages

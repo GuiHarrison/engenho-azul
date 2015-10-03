@@ -4,11 +4,11 @@
 		<!-- section -->
 		<section>
 
-		<?php if ( is_page( '59' || '54' || '145' ) ) { echo get_template_part('escolhaPessoas'); } else { echo get_template_part('escolhaInstitucional'); }  ?>
-
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-			<?php if (!is_home() && !is_page('home')) { the_breadcrumb(); } ?>
+		<?php if (!is_home() && !is_page('home')) { the_breadcrumb(); } ?>
+
+		<?php if ( is_page( '59' || '54' || '145' ) ) { echo get_template_part('escolhaPessoas'); } else { echo get_template_part('escolhaInstitucional'); }  ?>
 
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -26,7 +26,7 @@
 
 				<div class="pageConteudo">
 						<?php the_content(); ?>
-						<a href="javascript: window.history.go(-1)" id="voltar">Voltar</a>
+						<!-- <a href="javascript: window.history.go(-1)" id="voltar">Voltar</a> -->
 				</div>
 
 				<br class="clear">

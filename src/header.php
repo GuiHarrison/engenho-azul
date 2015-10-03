@@ -53,7 +53,7 @@
 						<!-- menu para escolher portal -->
 						<ul class="qualPortal">
 							<li><a class="current" href="http://ingage.guiharrison.com/precon2">Institucional</a></li>
-							<li><a href="http://ingage.guiharrison.com/precon">Pré-fabricado de concreto</a></li>
+							<li><a href="http://ingage.guiharrison.com/precon1">Pré-fabricado de concreto</a></li>
 							<li><a href="http://www.meuprecon.com.br">Venda de imóveis</a></li>
 						</ul>
 						<!-- /menu para escolher portal -->
@@ -138,7 +138,7 @@
 							?>" class="cadaItem" id="itemMenu3">
 								<span class="icone menu5"></span>
 								<span class="iconeA menuAzul5"></span>
-								<h3 class="menuTitulo">Downloads</h3>
+								<h3 class="menuTitulo">Downloads & Vídeos</h3>
 									<hr>
 								<p class="menuDesc">Materiais ricos criados para você.</p>
 								<span class="saibaMais">SAIBA MAIS</span>

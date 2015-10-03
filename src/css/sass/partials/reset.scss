@@ -26,7 +26,8 @@ body {
   line-height: $line-height-base;
   color: $text-color;
   background-color: $body-bg;
-  letter-spacing: 1px;
+  letter-spacing: 0;
+  word-spacing: 3px;
   font-weight: 300;
 }
 

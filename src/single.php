@@ -12,10 +12,6 @@
 		<!-- article -->
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<div class="downloadSingle">
-				<h1><?php the_title(); ?></h1>
-				<h2><?php echo get_field('subtitulo') ?></h2>
-			</div>
 
 		<!-- post thumbnail -->
 		<?php if ( has_post_thumbnail() ) : // Check if Thumbnail exists ?>
@@ -24,6 +20,12 @@
 			</a>
 		<?php endif; ?>
 		<!-- /post thumbnail -->
+
+		<div class="downloadSingle">
+			<h1><?php the_title(); ?></h1>
+			<h2><?php echo get_field('subtitulo') ?></h2>
+		</div>
+
 			<?php the_content(); // Dynamic Content ?>
 
 			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
@@ -36,10 +38,6 @@
 			<article> <h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1> </article>
 			<!-- /article -->
 		<?php endif; ?>
-
-		<?php get_sidebar(); ?>
-
-
 
 	</section>
 	<!-- /section -->

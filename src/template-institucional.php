@@ -1,45 +1,58 @@
 <?php /* Template Name: Institucional */ get_header(); ?>
 
-	<main role="main">
-		<!-- section -->
-		<section>
+<main role="main">
+	<!-- section -->
+	<section>
 
-			<h1><?php the_title(); ?></h1>
+	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+	<?php if (!is_home() && !is_page('home')) { the_breadcrumb(); } ?>
 
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php echo get_template_part('escolhaInstitucional'); ?>
 
-				<?php the_content(); ?>
+		<!-- article -->
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
+			<div class="pageCabecalho" style="background-image:url(
+				<?php
+						$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						$url = $thumb['0'];
 
-				<br class="clear">
+						if(has_post_thumbnail()) {echo $url;}
+				?>
+			)">
+				<h1><?php the_title(); ?></h1>
+			</div>
 
-				<?php edit_post_link(); ?>
+			<div class="pageConteudo">
+					<?php the_content(); ?>
+					<!-- <a href="javascript: window.history.go(-1)" id="voltar">Voltar</a> -->
+			</div>
 
-			</article>
-			<!-- /article -->
+			<br class="clear">
 
-		<?php endwhile; ?>
+			<?php edit_post_link(); ?>
 
-		<?php else: ?>
+		</article>
+		<!-- /article -->
 
-			<!-- article -->
-			<article>
+	<?php endwhile; ?>
 
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+	<?php else: ?>
 
-			</article>
-			<!-- /article -->
+		<!-- article -->
+		<article>
 
-		<?php endif; ?>
+			<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
 
-		</section>
-		<!-- /section -->
-	</main>
+		</article>
+		<!-- /article -->
 
-<?php get_sidebar(); ?>
+	<?php endif; ?>
+
+	</section>
+	<!-- /section -->
+</main>
+
 
 <?php get_footer(); ?>

@@ -128,8 +128,7 @@
 					}
 
 					&:hover, &.current {
-						background-color: $azul;
-						color: #fff;
+						color: $azul;
 					}
 				}
 			}
@@ -205,7 +204,7 @@
 				overflow: hidden;
 				background-color: transparent;
 				height: inherit;
-				padding: 10px 0;
+				padding: 10px;
 				margin-top: 0;
 
 				transition: margin-top .3s;
@@ -230,7 +229,7 @@
 					}
 				}
 
-				&:nth-child(3) {
+				&:nth-child(3), &:nth-child(5) {
 
 					.cadaItem {
 

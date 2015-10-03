@@ -4,11 +4,11 @@
 		<!-- section -->
 		<section>
 
-		<?php echo get_template_part('escolhaPessoas'); ?>
-
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 			<?php if (!is_home() && !is_page('home')) { the_breadcrumb(); } ?>
+
+			<?php echo get_template_part('escolhaPessoas'); ?>
 
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -26,15 +26,13 @@
 
 				<div class="pageConteudo">
 					<?php the_content(); ?>
-					<a href="javascript: window.history.go(-1)" id="voltar">Voltar</a>
 				</div>
 
 				<div id="trabalheConosco">
 					<h4>Um reconhecimento recente que comprova o sucesso da nossa cultura foi o prêmio concedido pelo Great Place to Work a Precon Engenharia como a</h4>
 					<h4>4ª MELHOR EMPRESA PARA SE TRABALHAR EM MINAS GERAIS.</h4>
 					<div class="seloEbotao">
-						<img class="selo" src="<?php echo get_template_directory_uri(); ?>/img/greatPlace.png" alt="Great Place to Work">
-						<a class="botaoLaranja" href="http://www.vagas.com.br/vagas-de-precon" target="_blank">Vagas</a>
+						<img class="selo" src="<?php echo get_template_directory_uri(); ?>/img/gptw2015mg.png" alt="Great Place to Work">
 					</div>
 				</div>
 
