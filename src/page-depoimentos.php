@@ -21,8 +21,10 @@
 				 	// loop through the rows of data
 				    while ( have_rows('repeatDep') ) : the_row();
 
+						$lightbox = (!wp_is_mobile()) ? 'rel="wp-video-lightbox"' : '';
+
 						echo
-						'<a href="'. get_sub_field('videoDep') .'" class="cadaDepoimento">'.
+						'<a '. $lightbox .' href="'. get_sub_field('videoDep') .'" class="cadaDepoimento">'.
 							'<div class="thumbVideo" style="background-image:url('. get_sub_field('thumbDep') .');"></div>'.
 							'<h4>'. get_sub_field('tituloDep') .'</h4>'.
 							'<p>'. get_sub_field('descDep') .'</p>'.

@@ -19,6 +19,17 @@
 		padding: 15px 0;
 		@include span(1 of 1 0);
 
+    // @include susy-media (max-width 960px) {
+    //   .wrapper {
+    //     @include container(1);
+
+    //     .footerMenu {
+    //       width: 100%;
+    //       clear: both;
+    //     }
+    //   }
+    // }
+
 		.footerMenu {
 			display: block;
 			float: left;
@@ -31,12 +42,21 @@
 			padding-right: 20px;
 			height: 140px;
 
+      @include susy-media (max-width 960px) {
+        width: 100%;
+        clear: both;
+        margin: 0;
+        padding: 20px 0;
+        max-width: 100%;
+        height: auto;
+      }
+
 			&:nth-child(3), &:nth-child(4) {
 				//max-width: 180px;
 			}
 
 			@include susy-media (max-width 960px) {
-				@include span(12);
+				@include span(1 of 1);
 				border: none;
 				border-bottom: solid 1px #fff;
 			}

@@ -7,7 +7,16 @@
 				$mM = $('.menuMobile'),
 				$bgC = $('.bgCinza'),
 				$cqs = $('.cadaQuemSomos'),
-				$header = $('.header');
+				$header = $('.header'),
+				$mastheadChildren = $('#mast-head .umSlide');
+
+		$('#mast-head .umSlide:gt(0)').hide();
+		setInterval(function(){
+			$('#mast-head :first-child').fadeOut(500)
+				.next('.umSlide').fadeIn(500)
+				.end().appendTo('#mast-head');
+		}, 3000);
+
 
 		$headerButton.removeClass('hamburger--open');
 		$mM.removeClass('menuMobileAberto');

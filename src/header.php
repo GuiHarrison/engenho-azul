@@ -14,23 +14,23 @@
 
 		<?php wp_head(); ?>
 		<script>
-	        // conditionizr.com
-	        // configure environment tests
-	        conditionizr.config({
-	            assets: '<?php echo get_template_directory_uri(); ?>',
-	            tests: {}
-	        });
-        </script>
+      // conditionizr.com
+      // configure environment tests
+      conditionizr.config({
+          assets: '<?php echo get_template_directory_uri(); ?>',
+          tests: {}
+      });
+    </script>
 
-        <script>
-          (function(d) {
-            var config = {
-              kitId: 'fug8vxk',
-              scriptTimeout: 3000
-            },
-            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-          })(document);
-        </script>
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'fug8vxk',
+          scriptTimeout: 3000
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
 
 	</head>
 	<body <?php body_class(); ?>>
@@ -38,6 +38,16 @@
 
 			<!-- header -->
 			<header class="header clear <?php if (wp_is_mobile()) { echo 'menuAberto'; } elseif (!is_page('home')) { echo 'menorNasInternas'; } ?>" role="banner">
+				<!-- <?php if (shortcode_exists( 'simple-slider' )) : do_shortcode( '[simple-slider]' ); endif; ?> -->
+				<div id="mast-head">
+					<?php
+					if( have_rows('imagens', 'option') ):
+					    while ( have_rows('imagens', 'option') ) : the_row();
+							echo '<div class="umSlide" style="background-image:url('. get_sub_field('slide') .')"></div>';
+					    endwhile;
+					endif;
+					?>
+				</div>
 
 				<div class="wrapper">
 					<div class="barraDeCima">
@@ -111,13 +121,7 @@
 						</li>
 
 						<li class="boxPreto">
-							<a href="<?php
-								$args = array( 'numberposts' => 1 );
-								$lastposts = get_posts( $args );
-								foreach($lastposts as $post) : setup_postdata($post);
-								echo the_permalink();
-								endforeach;
-							?>" class="cadaItem" id="itemMenu2">
+							<a href="<?php echo site_url("/noticias/"); ?>" class="cadaItem" id="itemMenu2">
 								<span class="icone menu4"></span>
 								<span class="iconeA menuAzul4"></span>
 								<h3 class="menuTitulo">Notícias</h3>
@@ -129,13 +133,7 @@
 						</li>
 
 						<li class="boxPreto">
-							<a href="<?php
-								$args = array( 'numberposts' => 1, 'post_type' => 'downloads' );
-								$lastposts = get_posts( $args );
-								foreach($lastposts as $post) : setup_postdata($post);
-								echo the_permalink();
-								endforeach;
-							?>" class="cadaItem" id="itemMenu3">
+							<a href="<?php echo get_post_type_archive_link( downloads ); ?>" class="cadaItem" id="itemMenu3">
 								<span class="icone menu5"></span>
 								<span class="iconeA menuAzul5"></span>
 								<h3 class="menuTitulo">Downloads & Vídeos</h3>

@@ -20,9 +20,9 @@
 				<?php
 					$image = get_field('imagem');
 					$tamanho = 'downloads';
-					$banner = $image['sizes'][$tamanho];
+					// $banner = $image['sizes'][$tamanho];
 
-					echo '<img src="' . $banner . '" class="foto">';
+					echo '<img src="' . $image . '" class="foto">';
 				?>
 				<!-- /post thumbnail -->
 

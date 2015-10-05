@@ -26,8 +26,15 @@
 
 				<div class="pageConteudo">
 						<?php the_content(); ?>
-						<!-- <a href="javascript: window.history.go(-1)" id="voltar">Voltar</a> -->
+						<!-- <a href="javascript: window.history.go(-1)" id="voltar">Voltar</a> -->		
 				</div>
+
+				<a href="http://www.vagas.com.br/vagas-de-precon" target="_blank" id="trabalheConosco">
+						<div class="trabalheR cadaTrabalhe">
+								<p>Se identificou?! Então venha fazer parte do nosso time!</p>
+								<div class="botaoLaranja">Vagas</div>
+						</div>
+				</a>
 
 				<br class="clear">
 

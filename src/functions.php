@@ -19,7 +19,16 @@ require_once ($functions_path . "modules/theme-customizer.php");
 
 if (!isset($content_width))
 {
-    $content_width = 900;
+    $content_width = 1280;
+}
+
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'page_title' => 'Opções',
+        'menu_title' => 'Opções',
+        'menu_slug' => 'opcoes',
+        'position' => 3
+    ));
 }
 
 if (function_exists('add_theme_support'))

@@ -8,8 +8,8 @@
 .header {
 	position: relative;
 	width: 100%;
-	background: url(img/banner.png) center 70%;
-	background-size: cover;
+	// background: url(img/banner.png) center 70%;
+	background-size: cover !important;
 	height: 100vh;
 	min-height: 300px;
 	margin-bottom: 20px;
@@ -17,6 +17,26 @@
 	box-shadow: 0 30px 60px rgba(#000, .15);
 
 	transition: all .5s;
+
+	#mast-head {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		.umSlide {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+
+			background-size: cover;
+			background-repeat: none;
+			background-position: 50% 80%;
+		}
+	}
 
 	&.menorNasInternas {
 		height: 400px;
@@ -49,6 +69,7 @@
 			bottom: 0;
 			left: 0;
 			height: 80vh;
+      min-height: 300px;
 			width: 200px;
 			background-color: rgba(#fff, .9);
 		}
@@ -88,6 +109,11 @@
 				@include span(1 of 3 0);
 				display: table;
 
+        @include susy-media (max-width 960px) {
+          @include span(1 of 1);
+          display: block;
+        }
+
 				&:nth-child(2) a {
 					border: none;
 				}
@@ -119,7 +145,7 @@
 						border: none;
 						display: block;
 						height: initial;
-						padding: 20px 0;
+						padding: 10px 0;
 						border-bottom: solid 3px;
 
 						&:last-child {

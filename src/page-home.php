@@ -94,7 +94,7 @@
 					<img src="<?php echo get_template_directory_uri(); ?>/img/contatoMeuPrecon.png" alt="Contato Meu Precon">
 				</a>
 
-				<a href="http://www.meuprecon.com.br/contato/" target="_blank" class="contatoMeuPrecon">
+				<a href="http://www.meuprecon.com.br/contato/" target="_blank" class="contatoGeral">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/contatoAtendimento.png" alt="Contato Meu Precon">
 				</a>
 

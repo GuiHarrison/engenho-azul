@@ -1,0 +1,52 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	deleted:    node_modules.rar
+#	deleted:    src 3.zip
+#	renamed:    src 4.zip -> src.rar
+#	deleted:    src.zip
+#	new file:   src/archive-downloads.php
+#	renamed:    src/template-institucional.php -> src/backup_page-governanca.php
+#	modified:   src/css/sass/modules/fonts.scss
+#	modified:   src/css/sass/modules/sprite.png
+#	modified:   src/css/sass/partials/footer.scss
+#	modified:   src/css/sass/partials/header.scss
+#	modified:   src/css/sass/partials/home.scss
+#	modified:   src/css/sass/partials/pages.scss
+#	modified:   src/css/sass/partials/reset.scss
+#	modified:   src/css/style.css
+#	modified:   src/footer.php
+#	modified:   src/functions.php
+#	modified:   src/header.php
+#	new file:   src/img/contatoAtendimento.png
+#	deleted:    src/img/contatoGeral.jpg
+#	modified:   src/img/contatoGeral.png
+#	deleted:    src/img/contatoMeuPrecon.jpg
+#	modified:   src/img/contatoMeuPrecon.png
+#	new file:   src/img/gptw2015mg.png
+#	renamed:    src/img/sprites/menu5.png -> src/img/sprites/menu4.png
+#	renamed:    src/img/sprites/menu4.png -> src/img/sprites/menu5.png
+#	modified:   src/template-institucional.php
+#
+# Changes not staged for commit:
+#	modified:   gulpfile.js
+#	modified:   src/page-certificacoes.php
+#	modified:   src/page-home.php
+#	modified:   src/page-pessoas.php
+#	modified:   src/page-vantagens.php
+#	modified:   src/single-noticias.php
+#	modified:   src/single.php
+#	modified:   src/sprite.png
+#	modified:   src/style.css
+#	modified:   src/template-pessoas.php
+#
+# Untracked files:
+#	gulpfile-2.js
+#	src/page-downloads.php
+#	src/page-noticias.php
+#
+

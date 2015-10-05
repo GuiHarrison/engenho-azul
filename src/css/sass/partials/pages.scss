@@ -252,6 +252,10 @@ article {
 	text-align: center;
 	width: $botao-topo-width*3;
 
+  @include susy-media (max-width 960px) {
+    width: 100%;
+  }
+
 	li.botaoTopo {
 		display: table;
 		float: left;
@@ -291,12 +295,42 @@ article {
 }
 
 #trabalheConosco {
+	display: block;
 	position: relative;
 	border: 8px double;
 	color: #fff;
 	margin-top: 10px;
 	background-color: $azul;
 	padding: 0 20px;
+
+  @include susy-media (max-width 960px) {
+    text-align: center;
+  }
+
+	p {
+		font-size: 1.6rem;
+	}
+
+	.botaoLaranja {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+
+		padding: 15px 100px;
+		background-color: #C46600;
+		color: #fff;
+		font-size: 1.6rem;
+		text-transform: uppercase;
+		font-weight: 600;
+		text-align: center;
+
+    @include susy-media (max-width 960px) {
+      position: relative;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+	}
 
 	h4 {
 		font-size: 150%;
@@ -360,17 +394,44 @@ article {
 	display: block;
 	background-color: lighten($cinza, 20) !important;
 	background-position: right top !important;
-	background-size: contain !important;
+	background-size: contain;
 	height: 150px;
 	color: #fff;
 	padding: 10px;
 	margin-bottom: 10px;
+
+  @include susy-media (max-width 960px) {
+    background-image: none !important;
+    height: auto;
+    position: relative;
+
+    &:after {
+      content: '+';
+      display: block;
+      width: 20px;
+      height: 20px;
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 0;
+      position: absolute;
+      right: 20px;
+      bottom: 10px;
+    }
+  }
 
 	transition: all .4s;
 
 	&.boxPA {
 		background-color: $azul !important;
 		height: 200px;
+
+    @include susy-media (max-width 960px) {
+      height: auto;
+
+      &:after {
+        content: '-';
+      }
+    }
 	}
 
 	h2 {
@@ -380,29 +441,40 @@ article {
 		font-size: 2.5rem;
 		line-height: 1;
 		margin: 0;
+
+    @include susy-media (max-width 960px) {
+      border-bottom: none;
+    }
 	}
 
 	&#box1 {
-		background: url(img/preEngBanner.png) no-repeat;
+		background-image: url(img/preEngBanner.png);
+    background-repeat: no-repeat;
 	}
 	&#box2 {
-		background: url(img/preFabBanner.png) no-repeat;
+		background-image: url(img/preFabBanner.png);
+    background-repeat: no-repeat;
 	}
 	&#box3 {
-		background: url(img/linHabBanner.png) no-repeat;
+		background-image: url(img/linHabBanner.png);
+    background-repeat: no-repeat;
 	}
 	&#box4 {
-		background: url(img/dnaPreBanner.png) no-repeat;
+		background-image: url(img/dnaPreBanner.png);
+    background-repeat: no-repeat;
 	}
 
 	&#sus1 {
-		background: url(img/inovacaoLamp.png) no-repeat;
+		background-image: url(img/inovacaoLamp.png);
+    background-repeat: no-repeat;
 	}
 	&#sus2 {
-		background: url(img/inovacaoFolha.png) no-repeat;
+		background-image: url(img/inovacaoFolha.png);
+    background-repeat: no-repeat;
 	}
 	&#sus3 {
-		background: url(img/inovacaoPessoas.png) no-repeat;
+		background-image: url(img/inovacaoPessoas.png);
+    background-repeat: no-repeat;
 	}
 }
 
@@ -437,6 +509,10 @@ article {
 		background-color: $azul;
 		background-position: right top;
 
+    @include susy-media (max-width 960px) {
+      height: auto;
+    }
+
 		h1 {
 			color: #fff;
 			font-size: 3rem;
@@ -447,6 +523,10 @@ article {
 			position: absolute;
 			bottom: 0;
 			border: none;
+
+      @include susy-media (max-width 960px) {
+        position: relative;
+      }
 
 			&:before {
 				display: none;
@@ -502,6 +582,10 @@ article {
 			margin-bottom: 40px;
 			display: table;
 
+      @include susy-media (max-width 960px) {
+        @include span(1 of 1 0);
+      }
+
 			.contemLogo {
 				height: 200px;
 				padding: 10px;
@@ -547,11 +631,19 @@ article {
 
 			img {
 				@include span(4);
+
+        @include susy-media (max-width 960px) {
+          width: 100%;
+        }
 			}
 
 			p {
 				@include span(8);
 				font-size: 2rem;
+
+        @include susy-media (max-width 960px) {
+          @include span(1 of 1);
+        }
 			}
 		}
 	}
@@ -563,6 +655,12 @@ article {
 	height: 150px;
 	background-color: #eaeaea;
 
+  @include susy-media (max-width 960px) {
+    @include span(12);
+    height: auto;
+    margin-bottom: 20px;
+  }
+
 	h4 {
 		color: $azul;
 		text-transform: uppercase;
@@ -573,6 +671,11 @@ article {
 
 	p {
 		font-size: 1.5rem;
+
+    @include susy-media (max-width 960px) {
+      clear: both;
+      margin: 10px;
+    }
 	}
 
 	.thumbVideo {
@@ -583,6 +686,10 @@ article {
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
+
+    @include susy-media (max-width 960px) {
+      margin-bottom: 20px;
+    }
 	}
 }
 
@@ -605,17 +712,31 @@ article {
 			display: block;
 			position: relative;
 
+      @include susy-media (max-width 960px) {
+        @include span(1 of 1 0);
+        height: 150px;
+        overflow: hidden;
+      }
+
 			img {
 				max-width: 100%;
 				max-height: 400px;
 
 				width: auto;
 				height: auto;
+
+        @include susy-media (max-width 960px) {
+          width: 100%;
+        }
 			}
 		}
 
 		.conteudoNoticiaDestaque {
 			@include span(last 6);
+
+      @include susy-media (max-width 960px) {
+        @include span(1 of 1);
+      }
 
 			h3, h4 {
 				color: $azul;
@@ -644,11 +765,31 @@ article {
 		height: 170px;
 		padding: 15px;
 
+    @include susy-media (max-width 960px) {
+      @include span(12);
+      height: auto;
+      text-align: center;
+    }
+
 		.linkPostOutrasNoticias {
 			h3 {
 				text-transform: uppercase;
 				color: $azul;
+
+        @include susy-media (max-width 960px) {
+          clear: both;
+          margin: 0;
+          padding-top: 10px;
+          position: relative;
+          display: block;
+        }
 			}
+
+      @include susy-media (max-width 960px) {
+        h4{
+          display: none;
+        }
+      }
 		}
 
 		.linkImagemOutrasNoticias {
@@ -663,6 +804,12 @@ article {
 				margin: 0 auto;
 				max-height: 170-30px;
 				max-width: 230px;
+
+        @include susy-media (max-width 960px) {
+          display: block;
+          position: relative;
+          overflow: hidden;
+        }
 			}
 		}
 
