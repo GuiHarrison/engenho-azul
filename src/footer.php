@@ -6,76 +6,49 @@
 
 				<section class="azul">
 					<div class="wrapper">
-						<ul id="menuInstitucional" class="institucional footerMenu">
-							<li><h4>Institucional</h4></li>
-							<li><a href="<?php echo get_permalink('23'); ?>">Quem Somos</a></li>
-							<li><a href="<?php echo get_permalink('56'); ?>">Prêmios e Certificações</a></li>
-							<li><a href="<?php echo get_permalink('29'); ?>">Governança</a></li>
+						<ul id="mapaSite">
+
+							<li id="menuInstitucional" class="footerMenu institucional">
+								<a href="<?php echo home_url(); ?>/institucional/epc/"><h4>Institucional</h4></a>
+								<ul>
+									<li><a href="<?php echo get_permalink('23'); ?>">Quem Somos</a></li>
+									<li><a href="<?php echo get_permalink('56'); ?>">Prêmios e Certificações</a></li>
+									<li><a href="<?php echo get_permalink('54'); ?>">Pessoas</a></li>
+									<li><a href="<?php echo get_permalink('31'); ?>">Inovação e Sustentabilidade</a></li>
+									<li><a href="<?php echo site_url("/noticias/"); ?>">Noticias</a></li>
+									<li><a href="<?php echo get_post_type_archive_link( downloads ); ?>">Videos e Downloads</a></li>
+								</ul>
+							</li>
+
+							<li id="menuPreFabricados" class="footerMenu preFabricados">
+								<a href="#_"><h4>Pré-fabricados de concreto</h4></a>
+								<ul>
+									<li><a href="#_">Soluções Construtivas</a></li>
+									<li><a href="#_">Vantagens</a></li>
+									<li><a href="#_">Obras Realizadas</a></li>
+								</ul>
+							</li>
+
+							<li id="menuMeuPrecon" class="footerMenu meuPrecon">
+								<a href="<?php echo home_url(); ?>/institucional/epc/"><h4>Venda de Imóveis</h4></a>
+								<ul>
+									<li><a target="_blank" href="http://www.meuprecon.com.br/categoria/imoveis-a-venda/">Imóveis a venda</a></li>
+									<li><a target="_blank" href="http://www.meuprecon.com.br/nossa-planta/">Nossa planta</a></li>
+									<li><a target="_blank" href="http://www.meuprecon.com.br/nosso-produto/">Nosso produto</a></li>
+									<li><a target="_blank" href="http://www.meuprecon.com.br/entrega-garantida/">Entrega garantida</a></li>
+								</ul>
+							</li>
+
+							<li id="menuFaleConosco" class="footerMenu faleConosco">
+								<a href="<?php echo get_permalink('61'); ?>"><h4>Fale Conosco</h4></a>
+								<ul>
+									<li><a href="<?php echo home_url(); ?>/contato/">Geral</a></li>
+									<li><a target="_blank" href="http://www.meuprecon.com.br/contato/">Venda de Imóveis</a></li>
+									<li><a target="_blank" href="http://www.meuprecon.com.br/areadocliente/">Atendimento ao cliente</a></li>
+								</ul>
+							</li>
 						</ul>
-						<ul id="menuPessoas" class="pessoas footerMenu">
-							<li><h4>Pessoas</h4></li>
-							<li><a href="<?php echo get_permalink('54'); ?>">DNA Precon Engenharia</a></li>
-							<li><a href="<?php echo get_permalink('134'); ?>">Depoimentos</a></li>
-							<li><a href="<?php echo get_permalink('35'); ?>">Envie seu currículo</a></li>
-						</ul>
-						<ul id="menuInovacao" class="inovacao footerMenu">
-							<li><h4><a href="<?php echo get_permalink( '31' ); ?>">Inovação e sustentabilidade</a></h4></li>
-							<li><a href="<?php echo get_permalink('217'); ?>">Incentivo à inovação</a></li>
-							<li><a href="<?php echo get_permalink('220'); ?>">Incentivo à sustentabilidade</a></li>
-							<li><a href="<?php echo get_permalink('223'); ?>">Desenvolvimento humano/ações socioculturais</a></li>
-						</ul>
-						<ul id="menuNoticias" class="noticias footerMenu">
-							<h4>Notícias</h4>
-							<?php
-								$queryInst = new WP_Query( array(
-									'posts_per_page' => 3
-								) );
-								$caracteres = "30";
 
-								if ( $queryInst->have_posts() ) {
-
-									while ($queryInst->have_posts()) : $queryInst->the_post();
-										echo
-										'<li><a href="' . post_permalink() . '">';
-											if (strlen($post->post_title) > $caracteres) {
-												echo substr(the_title($before = '', $after = '', FALSE), 0, $caracteres) . '...';
-											} else {
-												the_title();
-											}
-										echo '</a></li>';
-									endwhile;
-
-								} else {
-									echo "<h2>Post não encontrado</h2>";
-								}
-							?>
-						</ul>
-						<ul id="menuDownloads" class="contato footerMenu">
-							<h4>Downloads</h4>
-							<?php
-								$queryInst = new WP_Query( array(
-									'post_type' => 'downloads',
-									'posts_per_page' => 3
-								) );
-
-								if ( $queryInst->have_posts() ) {
-
-									while ($queryInst->have_posts()) : $queryInst->the_post();
-										echo
-										'<li><a href="' . post_permalink() . '">';
-											if (strlen($post->post_title) > $caracteres) {
-												echo substr(the_title($before = '', $after = '', FALSE), 0, $caracteres) . '...';
-											} else {
-												the_title();
-											}
-										echo '</a></li>';
-									endwhile;
-
-								} else {
-									echo "<h2>Post não encontrado</h2>";
-								}
-							?>
-						</ul>
 						<div class="telefone">
 							<h3>
 								<span>(31)</span>

@@ -7,8 +7,8 @@
 				$mM = $('.menuMobile'),
 				$bgC = $('.bgCinza'),
 				$cqs = $('.cadaQuemSomos'),
-				$header = $('.header'),
-				$mastheadChildren = $('#mast-head .umSlide');
+				$header = $('.header');
+				// $mastheadChildren = $('#mast-head .umSlide');
 
 		$('#mast-head .umSlide:gt(0)').hide();
 		setInterval(function(){
